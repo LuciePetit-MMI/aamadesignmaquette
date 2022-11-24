@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base{
+    /*les styles de base, ex : les styles de text...*/
+}
+
+@layer components{
+    /*les styles de composants réutilisés, ex : boutons, formulaires, slider...*/
+}
+
+@layer utilities{
+    /*les styles spécifiques pour un élément*/ 
+}
