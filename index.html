@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="dist/main.css">
     <!--connection google font-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,15 +11,138 @@
     <link href="https://fonts.googleapis.com/css2?family=Secular+One&display=swap" rel="stylesheet">    
     <!--font quicksand-->
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
+    <!--font sao torpes-->
     <style type="text/css">
         @font-face {
             font-family: "Sao Torpes";
             src: url(./src/font/SaoTorpes.otf) format("opentype");
         }
-        </style>
+    </style>
+    <!--fontawsome-->
+    <script src="https://kit.fontawesome.com/7909d40077.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="dist/main.css">
     <title>Aama Design | lampe modulaire personnalisable</title>
 </head>
 <body>
-    <h1>Test</h1>
+    <header class="h-screen w-screen bg-blue flex flex-col items-center justify-between pb-10 overflow-hidden relative">
+        <div class="fixed z-50 backdrop-blur">
+            <div class="menu relative flex flex-row justify-between items-center w-screen px-5 py-2">
+                <div class="burger flex flex-col justify-between h-6 z-50 laptop:hidden">
+                    <span class="burger__line w-10 h-1 bg-marine rounded-full block"></span>
+                    <span class="burger__line w-10 h-1 bg-marine rounded-full block"></span>
+                    <span class="burger__line w-10 h-1 bg-marine rounded-full block"></span>
+                </div>
+    
+                <img src="/src/images/logo.svg" alt="" class="logo z-50">
+    
+                <i class="w-10 h-10 bg-marine z-50 laptop:hidden"><a href=""></a></i>
+                <nav class="hidden absolute top-0 left-0 w-screen h-screen flex flex-col items-center justify-center bg-white text-center z-10 laptop:static laptop:max-w-fit laptop:block laptop:h-full laptop:bg-[transparent]">
+                    <ul class="flex flex-col laptop:flex-row">
+                        <li class="mb-8 laptop:mb-0 laptop:mr-8"><a href="" class="font-saotorpes text-marine text-2xl">Accueil</a></li>
+                        <li class="mb-8 laptop:mb-0 laptop:mr-8"><a href="" class="font-saotorpes text-marine text-2xl">Ciluzio</a></li>
+                        <li class="mb-8 laptop:mb-0 laptop:mr-8"><a href="" class="font-saotorpes text-marine text-2xl">Panier</a></li>
+                        <li class="mb-8 laptop:mb-0 laptop:mr-8"><a href="" class="font-saotorpes text-marine text-2xl">Mon compte</a></li>
+                    </ul>
+                </nav>
+            </div>    
+        </div>
+        <h1 class="h1 tracking-widest text-6xl mt-24 laptop:mt-40 laptop:text-[12rem]">Ciluzio</h1>
+        <img src="/src/images/nude_grande.png" class="absolute -bottom-32 scale-150 laptop:scale-50 laptop:-bottom-full">
+        <div class="z-10 laptop:self-end laptop:w-1/3 laptop:mr-20">
+            <p class="text-white hidden laptop:block">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta beatae molestiae autem dolor non optio.</p>
+            <p class="text-white text-base font-semibold hidden laptop:block">À partir de 490€</p>
+            <button class="button justify-self-end">Personnaliser <i class="fa-light fa-arrow-right"></i></button>    
+        </div>
+    </header>
+    <main>
+        <div class="quote h-screen w-screen bg-skin text-center flex flex-col items-center justify-evenly px-5 relative overflow-hidden">
+            <img src="/src/images/arc_beige.svg" alt="" class="absolute top-16 left-0 w-1/2 laptop:top-0 laptop:w-auto">
+            <img src="/src/images/arc_beige.svg" alt="" class="absolute top-72 right-0 w-1/2 scale-x-[-1] laptop:hidden">
+            <h2 class="uppercase text-red text-quicksand text-xl font-medium z-10 laptop:text-5xl">Aama Design</h2>
+            <p class="h1 text-red z-10 mx-32">Des lampes  faites à la main en france</p>
+            <div class="z-10 macaron flex justify-center items-center">
+                <a href=""><img src="/src/images/macaron_icon.svg" alt=""></a>  
+            </div>    
+        </div>
+        <div class="video h-screen">
+            VIDEO AU SCROLL ICI
+        </div>
+        <div class="products p-5">
+            <h2 class="h2">Nos totems préfabriqués</h2>
+            <div>
+                <p>SLIDER HERE</p>
+            </div>
+        </div>
+        <div class="brand w-screen">
+            <div class="grid_brand">
+                <div class="brand_img w-screen h-[100vw] flex flex-col items-center justify-center laptop:h-auto laptop:w-auto">
+                    <img src="/src/images/brand_lamp.png" alt="IMAGE HERE" class="h-full">
+                </div>
+                <div class="brand_question w-screen h-[100vw] p-5 flex flex-col items-center justify-center text-center laptop:h-auto laptop:w-auto">
+                    <p class="h1 text-2xl">Aama Design, qu’est ce que c’est ?</p>
+                </div>
+                <div class="brand_pattern w-screen h-[100vw] flex flex-col items-center justify-center overflow-hidden laptop:h-auto laptop:w-auto">
+                    <img src="/src/images/brand_pattern.svg" alt="PATERN HERE" class="max-h-full">
+                </div>
+                <div class="brand_quote w-screen h-[100vw] p-5 flex flex-col items-center justify-center text-center bg-marine laptop:h-auto laptop:w-auto">
+                    <p class="text-white font-bold">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque doloremque suscipit praesentium, aperiam in optio.</p>
+                </div>
+                <div class="brand_anim w-screen h-[100vw] px-5 flex flex-col items-center justify-evenly bg-beige overflow-x-hidden laptop:col-span-2 laptop:h-auto laptop:w-auto">
+                    <p class="text-orange text-4xl font-saotorpes min-w-max animate-text-infinite">CILUZIO - CILUZIO - CILUZIO - CILUZIO - CILUZIO - CILUZIO - CILUZIO - CILUZIO - CILUZIO - CILUZIO - </p>
+                    <p class="text-orange text-4xl font-saotorpes min-w-max animate-text-infinite">CILUZIO - CILUZIO - CILUZIO - CILUZIO - CILUZIO - CILUZIO - CILUZIO - CILUZIO - CILUZIO - CILUZIO - </p>
+                    <p class="text-orange text-4xl font-saotorpes min-w-max animate-text-infinite">CILUZIO - CILUZIO - CILUZIO - CILUZIO - CILUZIO - CILUZIO - CILUZIO - CILUZIO - CILUZIO - CILUZIO - </p>
+                    <p class="text-orange text-4xl font-saotorpes min-w-max animate-text-infinite">CILUZIO - CILUZIO - CILUZIO - CILUZIO - CILUZIO - CILUZIO - CILUZIO - CILUZIO - CILUZIO - CILUZIO - </p>
+                    <p class="text-orange text-4xl font-saotorpes min-w-max animate-text-infinite">CILUZIO - CILUZIO - CILUZIO - CILUZIO - CILUZIO - CILUZIO - CILUZIO - CILUZIO - CILUZIO - CILUZIO - </p>
+                    <p class="text-orange text-4xl font-saotorpes min-w-max animate-text-infinite">CILUZIO - CILUZIO - CILUZIO - CILUZIO - CILUZIO - CILUZIO - CILUZIO - CILUZIO - CILUZIO - CILUZIO - </p>
+                </div>
+                <div class="brand_value w-screen h-[100vw] p-5 flex flex-col items-center justify-evenly bg-yellow laptop:h-auto laptop:w-auto">
+                    <p class="text-black font-bold">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat repudiandae facilis fuga, debitis minima hic eligendi qui assumenda, dolorum, ut minus? Culpa consequatur aspernatur totam fugit pariatur veritatis velit quam.</p>
+                    <button class="button bg-marine text-white">Nos valeurs <i class="fa-light fa-arrow-right"></i></button>
+                </div>
+            </div>
+
+        </div>
+        <div class="personalisation w-screen h-screen bg-orange p-5 relative flex flex-col items-center justify-between">
+            <img src="/src/images/victor-medio.webp" alt="" class="absolute">
+            <h2 class="h1 text-2xl text-white text-center z-10 laptop:text-5xl laptop:mt-20"><span>Personnalisez</span> <br/> <span>votre lampe</span></h2>
+            <div class="flex flex-col justify-between h-56 laptop:flex-row laptop:w-11/12">
+                <p class="text-white justify-self-end z-10 laptop:w-[30vw]">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam, maxime recusandae accusantium doloribus architecto accusamus.</p>
+                <div class="z-10 justify-self-end flex flex-col items-end">
+                    <button class="button bg-white text-orange">Personnaliser <i class="fa-light fa-arrow-right"></i></button>
+                    <button class="button_secondary border-white text-white mt-0">Besoin d'inspiration ?</button>          
+                </div>
+            </div>
+        </div>
+        <div class="opinions p-5">
+            <h2 class="h2">Ils sont convaincus</h2>
+            <div>
+                <p>SLIDER OPINIONS HERE</p>
+            </div>
+        </div>
+    </main>
+    <footer class="p-5 bg-beige laptop:flex laptop:flex-rows laptop:w-full laptop:justify-evenly">
+        <div class="footer_info">
+            <h3 class="h4 text-marine">Informations</h3>
+            <p><a href="">Livraison et retours</a></p>
+            <p><a href="">Documents techniques</a></p>
+            <p><a href="">CGV</a></p>
+            <p><a href="">Mentions légales</a></p>
+        </div>
+        <div class="footer_contact">
+            <h3 class="h4 text-marine">Contact</h3>
+            <p><a href="">Mail</a></p>
+            <p><a href="">Facebook</a></p>
+            <p><a href="">Instagram</a></p>
+            <p><a href="">Pinterest</a></p>
+        </div>
+        <div class="footer_newslettre">
+            <h3 class="h4 text-marine">Newsletter</h3>
+            <form action="" class="flex flex-col">
+                <label for="" class="hidden">Email</label>
+                <input type="email" placeholder="Email" class="border-solid border-2 border-marine rounded-full bg-[transparent] px-4 py-2 mb-3 placeholder:text-marine">
+                <input type="submit" value="S'inscrire" class="button bg-marine">
+            </form>
+        </div>
+    </footer>
 </body>
 </html>

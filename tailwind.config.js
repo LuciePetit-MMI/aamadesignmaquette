@@ -1,10 +1,9 @@
 module.exports = {
   mode: 'jit',
-  purge: [
+  content: [
       './src/**/*.{html,js}',
       './**/*.html',
   ],
-  darkMode: false,
   important: true,
   theme: {
     colors:{
@@ -12,6 +11,7 @@ module.exports = {
       'blue': '#376BB6',
       'beige': '#EBC89D',
       'skin': '#E7BC87',
+      'yellow':'#F0B024',
       'orange': '#E99C6C',
       'light-red': '#E75540',
       'red':'#E03E33',
