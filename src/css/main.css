@@ -4,8 +4,11 @@
 
 @layer base{
     /*les styles de base, ex : les styles de text...*/
+    * {
+        @apply m-0 p-0 box-border;
+    }
     body{
-        @apply box-border m-0 p-0 w-screen overflow-x-hidden;
+        @apply w-screen overflow-x-hidden;
     }
     .h1{
         @apply font-saotorpes text-marine text-5xl my-6 laptop:text-7xl
@@ -25,24 +28,15 @@
 }
 
 @layer components{
-    /*les styles de composants réutilisés, ex : boutons, formulaires, slider...*/
+/*----- Boutons */
     .button{
         @apply font-quicksand uppercase bg-red text-beige px-4 py-2 rounded-full my-2
     }
     .button_secondary{
         @apply font-quicksand border-solid border-2 border-marine text-marine px-4 py-2 rounded-full my-2
     }
-    .macaron{
-        background-image: url(../src/images/macaron.svg);
-        width: 100px;
-        height: 100px;
-        object-fit: contain;
-        animation: spin 10s linear infinite;
-        scale: 1.5;
-        align-self: start;
-        margin: 0 1.25rem;
-    }
-
+    
+/*----- Grille présentation de la marque */ 
     .grid_brand{
         display: grid;
         grid-template-rows: repeat(1, minmax(0, 1fr));
@@ -72,9 +66,7 @@
         grid-row: auto;
         grid-column: auto;
     }
-    .brand_macaron img{
-        animation: spin 10s linear infinite reverse;
-    }
+    
 
     @media screen and (min-width: 1024px) {
         .grid_brand{
@@ -107,18 +99,44 @@
         }
     }
 
+/*----- Macaron toutes nos lampes */ 
+    .macaron{
+        background-image: url(../src/images/macaron.svg);
+        width: 100px;
+        height: 100px;
+        object-fit: contain;
+        animation: spin 10s linear infinite;
+        scale: 1.5;
+        align-self: start;
+        margin: 0 1.25rem;
+    }
+    .brand_macaron img{
+        animation: spin 10s linear infinite reverse;
+    }
+
     @keyframes spin {
-    from {
-        transform: rotate(0deg);
+        from {
+            transform: rotate(0deg);
+        }
+        to {
+            transform: rotate(360deg);
+        }
     }
-    to {
-        transform: rotate(360deg);
+
+/*----- Slider */
+    .swiper {
+        width: 100vw;
+        height: auto;
     }
-    }
+    /*.swiper-slide{
+        background-image: url(../src/images/product_card.svg);
+        object-fit: contain;
+        max-height: 400px;
+    }*/
 }
 
 @layer utilities{
-    /*les styles spécifiques pour un élément*/ 
+/*----- Animation texte présentaiton de la marque */ 
     @keyframes move-infinite {
         0%{
             transform: translateX(0);
