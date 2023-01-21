@@ -155,6 +155,15 @@
     #lampes > div.swiper.flex.flex-col.justify-center.items-center.laptop\:hidden.swiper-initialized.swiper-horizontal.swiper-ios.swiper-backface-hidden > div.swiper-pagination.w-1\/2.static.m-3.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal > span.swiper-pagination-bullet.swiper-pagination-bullet-active{
         @apply bg-marine;
     }
+
+/*---- Cartes inspiration */
+    .inspi_card{
+        @apply grid grid-cols-1 gap-4 m-4 laptop:grid-cols-5 laptop:mx-20;
+    }
+    .inspi_card__colors{
+        @apply absolute left-0 top-0 translate-y-1/2 bg-white w-10 h-1/2 py-2 opacity-50 rounded-lg flex flex-col items-center justify-evenly;
+        border-radius: 0 16px 16px 0;
+    }
 }
 
 @layer utilities{

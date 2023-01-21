@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--connection google font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!--font secular one-->
+    <link href="https://fonts.googleapis.com/css2?family=Secular+One&display=swap" rel="stylesheet">    
+    <!--font quicksand-->
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
+    <!--font sao torpes-->
+    <style type="text/css">
+        @font-face {
+            font-family: "Sao Torpes";
+            src: url(./src/font/SaoTorpes.otf) format("opentype");
+        }
+    </style>
+    <!-- Swiper Js -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="./src/images/favicon.svg">
+
+    <link rel="stylesheet" href="../../dist/main.css">
+    <title>Aama Design | Mon compte</title>
+</head>
+<body>
+    <header class="overflow-hidden relative">
+        <div class="fixed z-50 backdrop-blur">
+            <div class="menu relative flex flex-row justify-between items-center w-screen px-5 py-2">
+                <div class="burger flex flex-col justify-between h-6 z-50 laptop:hidden">
+                    <span class="burger__line w-10 h-1 bg-marine rounded-full block"></span>
+                    <span class="burger__line w-10 h-1 bg-marine rounded-full block"></span>
+                    <span class="burger__line w-10 h-1 bg-marine rounded-full block"></span>
+                </div>
+    
+                <a href="../../index.html"><img src="/src/images/logo.svg" alt="" class="logo z-50"></a>
+    
+                <i class="w-10 h-10 bg-marine z-50 laptop:hidden"><a href=""></a></i>
+                <nav class="hidden absolute top-0 left-0 w-screen h-screen flex flex-col items-center justify-center bg-white text-center z-10 laptop:static laptop:max-w-fit laptop:block laptop:h-full laptop:bg-[transparent]">
+                    <ul class="flex flex-col laptop:flex-row">
+                        <li class="mb-8 laptop:mb-0 laptop:mr-8"><a href="../../index.html" class="font-saotorpes text-marine text-2xl">Accueil</a></li>
+                        <li class="mb-8 laptop:mb-0 laptop:mr-8"><a href="./lampes.html" class="font-saotorpes text-marine text-2xl">Ciluzio</a></li>
+                        <li class="mb-8 laptop:mb-0 laptop:mr-8"><a href="./cart.html" class="font-saotorpes text-marine text-2xl">Panier</a></li>
+                        <li class="mb-8 laptop:mb-0 laptop:mr-8"><a href="./account.html" class="font-saotorpes text-marine text-2xl">Mon compte</a></li>
+                    </ul>
+                </nav>
+            </div>    
+        </div>        
+    </header>
+    <main>
+        <div class="mx-auto mt-24 text-center">
+            <h1 class="h1">Vos inspiration</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum odit dignissimos modi libero ut quibusdam!</p>    
+        </div>
+        <div class="inspi_card">
+            <div class="relative w-fit">
+                <div class="absolute top-0 left-0 h-full w-full p-5 flex flex-col justify-between">
+                    <div class="flex flex-col">
+                        <p class="text-white mb-2">Création de Lorem Ipsum</p>
+                        <p class="text-white text-sm">Medio</p>
+                    </div>
+                    <div class="flex flex-row justify-between w-full items-baseline">
+                        <p class="button_secondary text-base">Modifier</p>
+                        <p class="button text-white bg-marine text-base">Acheter</p>
+                    </div>
+                </div>
+                <div class="relative -z-10">
+                    <img src="../../src/images/product_card.svg" alt="">
+                    <img src="../../src/images/product_image.png" alt="" class="absolute top-0 left-0">
+                </div>
+                <div class="inspi_card__colors">
+                    <svg width="20" height="20">
+                        <circle cx="10" cy="10" r="8" stroke="black" stroke-width="1"/>
+                    </svg>
+                    <svg width="20" height="20">
+                        <circle cx="10" cy="10" r="8" stroke="black" stroke-width="1"/>
+                    </svg>
+                    <svg width="20" height="20">
+                        <circle cx="10" cy="10" r="8" stroke="black" stroke-width="1"/>
+                    </svg>
+                    <svg width="20" height="20">
+                        <circle cx="10" cy="10" r="8" stroke="black" stroke-width="1"/>
+                    </svg>
+                    <svg width="20" height="20">
+                        <circle cx="10" cy="10" r="8" stroke="black" stroke-width="1"/>
+                    </svg>
+                    <svg width="20" height="20">
+                        <circle cx="10" cy="10" r="8" stroke="black" stroke-width="1"/>
+                    </svg>
+                    <svg width="20" height="20">
+                        <circle cx="10" cy="10" r="8" stroke="black" stroke-width="1"/>
+                    </svg>
+                </div>
+            </div>
+        </div>
+        <button class="button text-white bg-marine mx-auto my-4">Voir plus</button>    
+    </main>
+    <footer class="px-5 laptop:px-20 py-5 bg-skin laptop:flex laptop:flex-rows laptop:w-full laptop:justify-evenly">
+        <div class="footer_info">
+            <h3 class="h4 text-marine">Informations</h3>
+            <p><a href="">Livraison et retours</a></p>
+            <p><a href="">Documents techniques</a></p>
+            <p><a href="">CGV</a></p>
+            <p><a href="">Mentions légales</a></p>
+        </div>
+        <div class="footer_contact">
+            <h3 class="h4 text-marine">Contact</h3>
+            <p><a href="">Mail</a></p>
+            <p><a href="">Facebook</a></p>
+            <p><a href="">Instagram</a></p>
+            <p><a href="">Pinterest</a></p>
+        </div>
+        <div class="footer_newslettre">
+            <h3 class="h4 text-marine">Newsletter</h3>
+            <form action="" class="flex flex-col">
+                <label for="" class="hidden">Email</label>
+                <input type="email" placeholder="Email" class="border-solid border-2 border-marine rounded-full bg-[transparent] px-4 py-2 mb-3 placeholder:text-marine">
+                <input type="submit" value="S'inscrire" class="button bg-marine">
+            </form>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.swiper', {
+            // Optional parameters
+            direction: 'horizontal',
+            slidesPerView: 1,
+            spaceBetween: 10,
+            centeredSlides: true,
+        });
+    </script>
+</body>
+</html>
