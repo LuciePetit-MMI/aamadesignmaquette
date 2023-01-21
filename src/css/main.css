@@ -11,7 +11,7 @@
         @apply w-screen box-border m-0 p-0 overflow-x-hidden;
     }
     .h1{
-        @apply font-saotorpes text-marine text-5xl my-6 laptop:text-7xl
+        @apply font-saotorpes text-marine text-3xl my-6 laptop:text-7xl
     }
     .h2{
         @apply font-secularone text-black text-4xl my-6
@@ -29,6 +29,7 @@
         label{
             @apply mb-0
         }
+    }
 }
 
 @layer components{
@@ -42,7 +43,7 @@
     .button_secondary{
         @apply font-quicksand border-solid border-2 border-marine text-marine px-4 py-2 rounded-full my-2  flex justify-center items-center cursor-pointer
     }
-    .button-secondary svg{
+    .button_secondary svg{
         @apply ml-4 stroke-marine
     }
     
@@ -149,7 +150,9 @@
     body > main > div.products.flex.flex-col > div > div.swiper-pagination.w-1\/2.static.m-3.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal > span.swiper-pagination-bullet, 
     body > main > div.products.flex.flex-col > div > div.swiper-pagination.w-1\/2.static.m-3.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal > span.swiper-pagination-bullet.swiper-pagination-bullet-active,
     body > main > div.opinions > div > div > div.swiper-pagination.w-1\/2.static.m-3.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal > span.swiper-pagination-bullet, 
-    body > main > div.opinions > div > div > div.swiper-pagination.w-1\/2.static.m-3.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal > span.swiper-pagination-bullet.swiper-pagination-bullet-active{
+    body > main > div.opinions > div > div > div.swiper-pagination.w-1\/2.static.m-3.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal > span.swiper-pagination-bullet.swiper-pagination-bullet-active,
+    #lampes > div.swiper.flex.flex-col.justify-center.items-center.laptop\:hidden.swiper-initialized.swiper-horizontal.swiper-ios.swiper-backface-hidden > div.swiper-pagination.w-1\/2.static.m-3.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal > span.swiper-pagination-bullet,
+    #lampes > div.swiper.flex.flex-col.justify-center.items-center.laptop\:hidden.swiper-initialized.swiper-horizontal.swiper-ios.swiper-backface-hidden > div.swiper-pagination.w-1\/2.static.m-3.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal > span.swiper-pagination-bullet.swiper-pagination-bullet-active{
         @apply bg-marine;
     }
 }
