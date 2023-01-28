@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--connection google font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!--font secular one-->
+    <link href="https://fonts.googleapis.com/css2?family=Secular+One&display=swap" rel="stylesheet">    
+    <!--font quicksand-->
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
+    <!--font sao torpes-->
+    <style type="text/css">
+        @font-face {
+            font-family: "Sao Torpes";
+            src: url(./src/font/SaoTorpes.otf) format("opentype");
+        }
+    </style>
+    <!-- Swiper Js -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="./src/images/favicon.svg">
+
+    <link rel="stylesheet" href="../../dist/main.css">
+    <title>Aama Design | Mon compte</title>
+</head>
+<body>
+    <header class="overflow-hidden relative">
+        <div class="fixed z-50 backdrop-blur">
+            <div class="menu relative flex flex-row justify-between items-center w-screen px-5 py-2">
+                <div class="burger flex flex-col justify-between h-6 z-50 laptop:hidden">
+                    <span class="burger__line w-10 h-1 bg-marine rounded-full block"></span>
+                    <span class="burger__line w-10 h-1 bg-marine rounded-full block"></span>
+                    <span class="burger__line w-10 h-1 bg-marine rounded-full block"></span>
+                </div>
+    
+                <a href="../../index.html"><img src="/src/images/logo.svg" alt="" class="logo z-50"></a>
+    
+                <i class="w-10 h-10 bg-marine z-50 laptop:hidden"><a href=""></a></i>
+                <nav class="hidden absolute top-0 left-0 w-screen h-screen flex flex-col items-center justify-center bg-white text-center z-10 laptop:static laptop:max-w-fit laptop:block laptop:h-full laptop:bg-[transparent]">
+                    <ul class="flex flex-col laptop:flex-row">
+                        <li class="mb-8 laptop:mb-0 laptop:mr-8"><a href="../../index.html" class="font-saotorpes text-marine text-2xl">Accueil</a></li>
+                        <li class="mb-8 laptop:mb-0 laptop:mr-8"><a href="./lampes.html" class="font-saotorpes text-marine text-2xl">Ciluzio</a></li>
+                        <li class="mb-8 laptop:mb-0 laptop:mr-8"><a href="./cart.html" class="font-saotorpes text-marine text-2xl">Panier</a></li>
+                        <li class="mb-8 laptop:mb-0 laptop:mr-8"><a href="./account.html" class="font-saotorpes text-marine text-2xl">Mon compte</a></li>
+                    </ul>
+                </nav>
+            </div>    
+        </div>        
+    </header>
+    <main>
+        <div class="bg-beige px-5 laptop:px-20 pt-20 relative h-screen w-screen overflow-hidden">
+            <div>
+                <svg class="absolute -top-32 -left-32" width="282" height="282" fill="none">
+                    <path opacity="0.8" fill-rule="evenodd" clip-rule="evenodd" d="M141 282C218.872 282 282 218.872 282 141C282 63.1278 218.872 0 141 0C63.1278 0 0 63.1278 0 141C0 218.872 63.1278 282 141 282ZM141 223.051C186.315 223.051 223.051 186.316 223.051 141C223.051 95.6846 186.315 58.9492 141 58.9492C95.6845 58.9492 58.9491 95.6846 58.9491 141C58.9491 186.316 95.6845 223.051 141 223.051Z" fill="#E7BC87"/>
+                </svg>
+                <svg class="absolute top-24 -right-16 scale-75" width="282" height="282" fill="none">
+                    <path opacity="0.8" fill-rule="evenodd" clip-rule="evenodd" d="M141 282C218.872 282 282 218.872 282 141C282 63.1278 218.872 0 141 0C63.1278 0 0 63.1278 0 141C0 218.872 63.1278 282 141 282ZM141 223.051C186.315 223.051 223.051 186.316 223.051 141C223.051 95.6846 186.315 58.9492 141 58.9492C95.6845 58.9492 58.9491 95.6846 58.9491 141C58.9491 186.316 95.6845 223.051 141 223.051Z" fill="#E7BC87"/>
+                </svg>
+                <svg class="absolute top-64 -left-16 scale-50" width="282" height="282" fill="none">
+                    <path opacity="0.8" fill-rule="evenodd" clip-rule="evenodd" d="M141 282C218.872 282 282 218.872 282 141C282 63.1278 218.872 0 141 0C63.1278 0 0 63.1278 0 141C0 218.872 63.1278 282 141 282ZM141 223.051C186.315 223.051 223.051 186.316 223.051 141C223.051 95.6846 186.315 58.9492 141 58.9492C95.6845 58.9492 58.9491 95.6846 58.9491 141C58.9491 186.316 95.6845 223.051 141 223.051Z" fill="#E7BC87"/>
+                </svg>
+                <svg class="absolute -bottom-20 right-4 scale-90" width="282" height="282" fill="none">
+                    <path opacity="0.8" fill-rule="evenodd" clip-rule="evenodd" d="M141 282C218.872 282 282 218.872 282 141C282 63.1278 218.872 0 141 0C63.1278 0 0 63.1278 0 141C0 218.872 63.1278 282 141 282ZM141 223.051C186.315 223.051 223.051 186.316 223.051 141C223.051 95.6846 186.315 58.9492 141 58.9492C95.6845 58.9492 58.9491 95.6846 58.9491 141C58.9491 186.316 95.6845 223.051 141 223.051Z" fill="#E7BC87"/>
+                </svg>
+            </div>
+            <div>
+                <div class="navigation my-5">
+                    <div class="flex flex-wrap w-full justify-between place-items-end laptop:w-1/3 laptop:mx-auto">
+                        <a href="./totems.html" class="relative cursor-pointer">
+                            <span class="block h-1 absolute -inset-x-2 -bottom-2 top-8 bg-marine hover:h-2" aria-hidden="true"></span>
+                            <span class="relative">Totems</span>
+                        </a>
+                        <a href="./lampes.html" class="relative cursor-pointer">
+                            <span class="block h-3 absolute -inset-x-2 -bottom-2 top-8 bg-light-red hover:h-2" aria-hidden="true"></span>
+                            <span class="relative font-bold">Personnaliser</span>
+                        </a>
+                        <a href="./generateur.html" class="relative cursor-pointer">
+                            <span class="block h-1 absolute -inset-x-2 -bottom-2 top-8 bg-blue hover:h-2" aria-hidden="true"></span>
+                            <span class="relative">Générateur</span>
+                        </a>
+                    </div>
+                </div>
+                <h1 class="h1 relative laptop:text-5xl">Personnalisez <br/>votre Ciluzio</h1>
+                <p class="text-marine font-bold relative">Choisissez vos couleurs</p>
+                <div class="generateur relative laptop:w-3/5 laptop:mx-auto">
+                    <div class="flex flex-col justify-between items-end my-8 laptop:flex-row laptop:my-4">
+                        <div class="image laptop:w-2/3 laptop:h-[45vh]">
+                            <img src="../images/victor-grande.webp" alt="" class="w-[55%] mx-auto laptop:w-auto laptop:h-full">
+                        </div>
+                        <div class="button-right flex flex-col items-end">
+                            <p class="font-bold text-marine text-2xl">Prix €€€</p>
+                            <a href="./lampes_3.html" class="button justify-self-end bg-marine">Suivant
+                                <svg width="28" height="16" viewBox="0 0 28 16" fill="none">
+                                    <path d="M1 8H26" stroke-width="3" stroke-linecap="round"/>
+                                    <path d="M19.5 1.5L26 8L19.5 14.5" stroke-width="3" stroke-linecap="round"/>
+                                </svg>
+                            </a>
+                            <a href="./lampes.html" class="button_secondary justify-self-end">
+                                <svg class="rotate-180 ml-0 mr-2" width="28" height="16" viewBox="0 0 28 16" fill="none">
+                                    <path d="M1 8H26" stroke-width="3" stroke-linecap="round"/>
+                                    <path d="M19.5 1.5L26 8L19.5 14.5" stroke-width="3" stroke-linecap="round"/>
+                                </svg>
+                                Précédent
+                            </a>  
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+        </div>
+
+
+        <div class="px-5 laptop:px-20 laptop:mx-48">
+            <h2 class="h2">Description</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores impedit accusantium fugit vel numquam ducimus blanditiis? Voluptatum dolore repellendus consequuntur.</p>
+            <h2 class="h2">Caractéristique</h2>
+            
+            <h2 class="h2">Livraison</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium vitae non tempora beatae nostrum dicta.</p>
+            <p class="font-bold">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consectetur, doloribus?</p>
+        </div>
+
+    </main>
+    <footer class="px-5 laptop:px-20 py-5 bg-skin laptop:flex laptop:flex-rows laptop:w-full laptop:justify-evenly">
+        <div class="footer_info">
+            <h3 class="h4 text-marine">Informations</h3>
+            <p><a href="">Livraison et retours</a></p>
+            <p><a href="">Documents techniques</a></p>
+            <p><a href="">CGV</a></p>
+            <p><a href="">Mentions légales</a></p>
+        </div>
+        <div class="footer_contact">
+            <h3 class="h4 text-marine">Contact</h3>
+            <p><a href="">Mail</a></p>
+            <p><a href="">Facebook</a></p>
+            <p><a href="">Instagram</a></p>
+            <p><a href="">Pinterest</a></p>
+        </div>
+        <div class="footer_newslettre">
+            <h3 class="h4 text-marine">Newsletter</h3>
+            <form action="" class="flex flex-col">
+                <label for="" class="hidden">Email</label>
+                <input type="email" placeholder="Email" class="border-solid border-2 border-marine rounded-full bg-[transparent] px-4 py-2 mb-3 placeholder:text-marine">
+                <input type="submit" value="S'inscrire" class="button bg-marine">
+            </form>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.swiper', {
+            // Optional parameters
+            direction: 'horizontal',
+            slidesPerView: 1,
+            spaceBetween: 10,
+            centeredSlides: true,
+        });
+    </script>
+</body>
+</html> 
+
+
+
+<div class="button-left flex flex-col items-start">
+    <button class="button_secondary p-3">
+        <svg class="ml-0" width="20" height="20" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12.4998 4.29383L11.3795 3.14226C8.74984 0.439138 3.92796 1.37195 2.18734 4.77039C1.37015 6.36883 1.18577 8.67664 2.67796 11.622C4.11546 14.4579 7.10609 17.8548 12.4998 21.5548C17.8936 17.8548 20.8826 14.4579 22.3217 11.622C23.8139 8.67508 23.6311 6.36883 22.8123 4.77039C21.0717 1.37195 16.2498 0.437576 13.6201 3.1407L12.4998 4.29383ZM12.4998 23.4376C-11.458 7.60633 5.12327 -4.74992 12.2248 1.78601C12.3186 1.87195 12.4108 1.96101 12.4998 2.0532C12.588 1.9611 12.6797 1.87249 12.7748 1.78758C19.8748 -4.75305 36.4576 7.60476 12.4998 23.4376Z" fill="#0C2750"/>
+        </svg>                                    
+    </button>
+</div>
