@@ -892,7 +892,7 @@ body > main > div.products.button_secondary.flex-col > div > div.swiper-paginati
 
 .account{
   display: grid;
-  grid-template-columns: 1fr 1.25fr;
+  grid-template-columns: 1fr 2fr;
 }
 
 /*----- Macaron toutes nos lampes */
@@ -1067,14 +1067,11 @@ body > main > div.products.flex.inspi_card__colors > div > div.swiper-pagination
   position: absolute;
   left: 0px;
   top: 0px;
-  display: flex;
   height: 50%;
   width: 2.5rem;
   --tw-translate-y: 50%;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
   border-radius: 0.5rem;
   --tw-bg-opacity: 1;
   background-color: rgb(241 238 237 / var(--tw-bg-opacity));
@@ -1757,10 +1754,21 @@ body > main > div.products.flex.inspi_card__colors > div > div.swiper-pagination
   line-height: 2rem !important;
 }
 
+.text-5xl {
+  font-size: 3rem; 
+  line-height: 1;
+}
+
 .text-sm {
   font-size: 0.875rem !important;
   line-height: 1.25rem !important;
 }
+
+.text-xs {
+  font-size: 0.75rem !important;
+  line-height: 1rem !important;
+}
+
 
 .text-base {
   font-size: 1rem !important;
@@ -1937,7 +1945,7 @@ body > main > div.products.flex.inspi_card__colors > div > div.swiper-pagination
 
   .laptop\:account{
     display: grid;
-    grid-template-columns: 1fr 1.25fr;
+    grid-template-columns: 1fr 2fr;
   }
 
   .laptop\:m-10 {
@@ -2015,8 +2023,8 @@ body > main > div.products.flex.inspi_card__colors > div > div.swiper-pagination
 
   body > main > div.laptop\:flex.products.flex-col > div > div.swiper-pagination.w-1\/2.static.m-3.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal > span.swiper-pagination-bullet, 
     body > main > div.laptop\:flex.products.flex-col > div > div.swiper-pagination.w-1\/2.static.m-3.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal > span.swiper-pagination-bullet.swiper-pagination-bullet-active,
-    #lampes > div.laptop\:flex.swiper.flex-col.justify-center.items-center.laptop\:hidden.swiper-initialized.swiper-horizontal.swiper-ios.swiper-backface-hidden > div.swiper-pagination.w-1\/2.static.m-3.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal > span.swiper-pagination-bullet,
-    #lampes > div.laptop\:flex.swiper.flex-col.justify-center.items-center.laptop\:hidden.swiper-initialized.swiper-horizontal.swiper-ios.swiper-backface-hidden > div.swiper-pagination.w-1\/2.static.m-3.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal > span.swiper-pagination-bullet.swiper-pagination-bullet-active {
+    #lampes > div.swiper.swiper_product.swiper-initialized.swiper-horizontal.swiper-ios.px-5.flex.flex-col.justify-center.items-center.swiper-backface-hidden > div.swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal,
+    #lampes > div.swiper.swiper_product.swiper-initialized.swiper-horizontal.swiper-ios.px-5.flex.flex-col.justify-center.items-center.swiper-backface-hidden > div.swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal > span.swiper-pagination-bullet.swiper-pagination-bullet-active{
     --tw-bg-opacity: 1;
     background-color: rgb(12 39 80 / var(--tw-bg-opacity));
   }
@@ -2029,8 +2037,8 @@ body > main > div.products.flex.inspi_card__colors > div > div.swiper-pagination
     body > main > div.products.flex.flex-col > div > div.laptop\:w-1\/2.swiper-pagination.static.m-3.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal > span.swiper-pagination-bullet.swiper-pagination-bullet-active,
     body > main > div.opinions > div > div > div.laptop\:w-1\/2.swiper-pagination.static.m-3.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal > span.swiper-pagination-bullet, 
     body > main > div.opinions > div > div > div.laptop\:w-1\/2.swiper-pagination.static.m-3.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal > span.swiper-pagination-bullet.swiper-pagination-bullet-active,
-    #lampes > div.swiper.flex.flex-col.justify-center.items-center.laptop\:hidden.swiper-initialized.swiper-horizontal.swiper-ios.swiper-backface-hidden > div.laptop\:w-1\/2.swiper-pagination.static.m-3.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal > span.swiper-pagination-bullet,
-    #lampes > div.swiper.flex.flex-col.justify-center.items-center.laptop\:hidden.swiper-initialized.swiper-horizontal.swiper-ios.swiper-backface-hidden > div.laptop\:w-1\/2.swiper-pagination.static.m-3.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal > span.swiper-pagination-bullet.swiper-pagination-bullet-active {
+    #lampes > div.swiper.swiper_product.swiper-initialized.swiper-horizontal.swiper-ios.px-5.flex.flex-col.justify-center.items-center.swiper-backface-hidden > div.swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal,
+    #lampes > div.swiper.swiper_product.swiper-initialized.swiper-horizontal.swiper-ios.px-5.flex.flex-col.justify-center.items-center.swiper-backface-hidden > div.swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal > span.swiper-pagination-bullet.swiper-pagination-bullet-active{
     --tw-bg-opacity: 1;
     background-color: rgb(12 39 80 / var(--tw-bg-opacity));
   }
@@ -2039,16 +2047,16 @@ body > main > div.products.flex.inspi_card__colors > div > div.swiper-pagination
     body > main > div.products.flex.flex-col > div > div.laptop\:static.swiper-pagination.w-1\/2.m-3.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal > span.swiper-pagination-bullet.swiper-pagination-bullet-active,
     body > main > div.opinions > div > div > div.laptop\:static.swiper-pagination.w-1\/2.m-3.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal > span.swiper-pagination-bullet, 
     body > main > div.opinions > div > div > div.laptop\:static.swiper-pagination.w-1\/2.m-3.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal > span.swiper-pagination-bullet.swiper-pagination-bullet-active,
-    #lampes > div.swiper.flex.flex-col.justify-center.items-center.laptop\:hidden.swiper-initialized.swiper-horizontal.swiper-ios.swiper-backface-hidden > div.laptop\:static.swiper-pagination.w-1\/2.m-3.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal > span.swiper-pagination-bullet,
-    #lampes > div.swiper.flex.flex-col.justify-center.items-center.laptop\:hidden.swiper-initialized.swiper-horizontal.swiper-ios.swiper-backface-hidden > div.laptop\:static.swiper-pagination.w-1\/2.m-3.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal > span.swiper-pagination-bullet.swiper-pagination-bullet-active {
+    #lampes > div.swiper.swiper_product.swiper-initialized.swiper-horizontal.swiper-ios.px-5.flex.flex-col.justify-center.items-center.swiper-backface-hidden > div.swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal,
+    #lampes > div.swiper.swiper_product.swiper-initialized.swiper-horizontal.swiper-ios.px-5.flex.flex-col.justify-center.items-center.swiper-backface-hidden > div.swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal > span.swiper-pagination-bullet.swiper-pagination-bullet-active{
     --tw-bg-opacity: 1;
     background-color: rgb(12 39 80 / var(--tw-bg-opacity));
   }
 
   body > main > div.laptop\:flex.products.flex-col > div > div.swiper-pagination.w-1\/2.static.m-3.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal > span.swiper-pagination-bullet, 
     body > main > div.laptop\:flex.products.flex-col > div > div.swiper-pagination.w-1\/2.static.m-3.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal > span.swiper-pagination-bullet.swiper-pagination-bullet-active,
-    #lampes > div.laptop\:flex.swiper.flex-col.justify-center.items-center.laptop\:hidden.swiper-initialized.swiper-horizontal.swiper-ios.swiper-backface-hidden > div.swiper-pagination.w-1\/2.static.m-3.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal > span.swiper-pagination-bullet,
-    #lampes > div.laptop\:flex.swiper.flex-col.justify-center.items-center.laptop\:hidden.swiper-initialized.swiper-horizontal.swiper-ios.swiper-backface-hidden > div.swiper-pagination.w-1\/2.static.m-3.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal > span.swiper-pagination-bullet.swiper-pagination-bullet-active {
+    #lampes > div.swiper.swiper_product.swiper-initialized.swiper-horizontal.swiper-ios.px-5.flex.flex-col.justify-center.items-center.swiper-backface-hidden > div.swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal,
+    #lampes > div.swiper.swiper_product.swiper-initialized.swiper-horizontal.swiper-ios.px-5.flex.flex-col.justify-center.items-center.swiper-backface-hidden > div.swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal > span.swiper-pagination-bullet.swiper-pagination-bullet-active{
     --tw-bg-opacity: 1;
     background-color: rgb(12 39 80 / var(--tw-bg-opacity));
   }
@@ -2057,8 +2065,8 @@ body > main > div.products.flex.inspi_card__colors > div > div.swiper-pagination
     body > main > div.products.flex.flex-col > div > div.laptop\:w-1\/2.swiper-pagination.static.m-3.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal > span.swiper-pagination-bullet.swiper-pagination-bullet-active,
     body > main > div.opinions > div > div > div.laptop\:w-1\/2.swiper-pagination.static.m-3.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal > span.swiper-pagination-bullet, 
     body > main > div.opinions > div > div > div.laptop\:w-1\/2.swiper-pagination.static.m-3.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal > span.swiper-pagination-bullet.swiper-pagination-bullet-active,
-    #lampes > div.swiper.flex.flex-col.justify-center.items-center.laptop\:hidden.swiper-initialized.swiper-horizontal.swiper-ios.swiper-backface-hidden > div.laptop\:w-1\/2.swiper-pagination.static.m-3.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal > span.swiper-pagination-bullet,
-    #lampes > div.swiper.flex.flex-col.justify-center.items-center.laptop\:hidden.swiper-initialized.swiper-horizontal.swiper-ios.swiper-backface-hidden > div.laptop\:w-1\/2.swiper-pagination.static.m-3.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal > span.swiper-pagination-bullet.swiper-pagination-bullet-active {
+    #lampes > div.swiper.swiper_product.swiper-initialized.swiper-horizontal.swiper-ios.px-5.flex.flex-col.justify-center.items-center.swiper-backface-hidden > div.swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal,
+    #lampes > div.swiper.swiper_product.swiper-initialized.swiper-horizontal.swiper-ios.px-5.flex.flex-col.justify-center.items-center.swiper-backface-hidden > div.swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal > span.swiper-pagination-bullet.swiper-pagination-bullet-active{
     --tw-bg-opacity: 1;
     background-color: rgb(12 39 80 / var(--tw-bg-opacity));
   }
@@ -2067,8 +2075,8 @@ body > main > div.products.flex.inspi_card__colors > div > div.swiper-pagination
     body > main > div.products.flex.flex-col > div > div.laptop\:static.swiper-pagination.w-1\/2.m-3.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal > span.swiper-pagination-bullet.swiper-pagination-bullet-active,
     body > main > div.opinions > div > div > div.laptop\:static.swiper-pagination.w-1\/2.m-3.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal > span.swiper-pagination-bullet, 
     body > main > div.opinions > div > div > div.laptop\:static.swiper-pagination.w-1\/2.m-3.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal > span.swiper-pagination-bullet.swiper-pagination-bullet-active,
-    #lampes > div.swiper.flex.flex-col.justify-center.items-center.laptop\:hidden.swiper-initialized.swiper-horizontal.swiper-ios.swiper-backface-hidden > div.laptop\:static.swiper-pagination.w-1\/2.m-3.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal > span.swiper-pagination-bullet,
-    #lampes > div.swiper.flex.flex-col.justify-center.items-center.laptop\:hidden.swiper-initialized.swiper-horizontal.swiper-ios.swiper-backface-hidden > div.laptop\:static.swiper-pagination.w-1\/2.m-3.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal > span.swiper-pagination-bullet.swiper-pagination-bullet-active {
+    #lampes > div.swiper.swiper_product.swiper-initialized.swiper-horizontal.swiper-ios.px-5.flex.flex-col.justify-center.items-center.swiper-backface-hidden > div.swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal,
+    #lampes > div.swiper.swiper_product.swiper-initialized.swiper-horizontal.swiper-ios.px-5.flex.flex-col.justify-center.items-center.swiper-backface-hidden > div.swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal > span.swiper-pagination-bullet.swiper-pagination-bullet-active{
     --tw-bg-opacity: 1;
     background-color: rgb(12 39 80 / var(--tw-bg-opacity));
   }
@@ -2122,8 +2130,8 @@ body > main > div.products.flex.inspi_card__colors > div > div.swiper-pagination
     body > main > div.products.flex.flex-col > div > div.laptop\:w-1\/2.swiper-pagination.static.m-3.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal > span.swiper-pagination-bullet.swiper-pagination-bullet-active,
     body > main > div.opinions > div > div > div.laptop\:w-1\/2.swiper-pagination.static.m-3.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal > span.swiper-pagination-bullet, 
     body > main > div.opinions > div > div > div.laptop\:w-1\/2.swiper-pagination.static.m-3.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal > span.swiper-pagination-bullet.swiper-pagination-bullet-active,
-    #lampes > div.swiper.flex.flex-col.justify-center.items-center.laptop\:hidden.swiper-initialized.swiper-horizontal.swiper-ios.swiper-backface-hidden > div.laptop\:w-1\/2.swiper-pagination.static.m-3.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal > span.swiper-pagination-bullet,
-    #lampes > div.swiper.flex.flex-col.justify-center.items-center.laptop\:hidden.swiper-initialized.swiper-horizontal.swiper-ios.swiper-backface-hidden > div.laptop\:w-1\/2.swiper-pagination.static.m-3.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal > span.swiper-pagination-bullet.swiper-pagination-bullet-active {
+    #lampes > div.swiper.swiper_product.swiper-initialized.swiper-horizontal.swiper-ios.px-5.flex.flex-col.justify-center.items-center.swiper-backface-hidden > div.swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal > span.swiper-pagination-bullet,
+    #lampes > div.swiper.swiper_product.swiper-initialized.swiper-horizontal.swiper-ios.px-5.flex.flex-col.justify-center.items-center.swiper-backface-hidden > div.swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal > span.swiper-pagination-bullet.swiper-pagination-bullet-active{
     --tw-bg-opacity: 1;
     background-color: rgb(12 39 80 / var(--tw-bg-opacity));
   }

@@ -1,5 +1,5 @@
 <template>
-  <div class="fixed z-50 backdrop-blur">
+  <div class="fixed top-0 left-0 z-50 backdrop-blur">
     <div class="menu relative flex flex-row justify-between items-center w-screen px-5 py-2">
         <div @click="openNav = !openNav" class="burger flex flex-col justify-between h-6 z-50 laptop:hidden">
             <span class="burger__line w-10 h-1 bg-marine rounded-full block"></span>
