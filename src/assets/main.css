@@ -1449,6 +1449,18 @@ body > main > div.products.flex.inspi_card__colors > div > div.swiper-pagination
   width: 25% !important;
 }
 
+.w-2\/4 {
+  width: 50% !important;
+}
+
+.w-3\/4 {
+  width: 75% !important;
+}
+
+.w-4\/4 {
+  width: 100% !important;
+}
+
 .w-2\/3 {
   width: 66.666667% !important;
 }
@@ -1962,6 +1974,10 @@ body > main > div.products.flex.inspi_card__colors > div > div.swiper-pagination
     margin-bottom: 1rem !important;
   }
 
+  .laptop\:ml-4 {
+    margin-left: 1rem !important;
+  }  
+
   .laptop\:my-10 {
     margin-top: 2.5rem !important;
     margin-bottom: 2.5rem !important;
@@ -2329,6 +2345,10 @@ body > main > div.products.flex.inspi_card__colors > div > div.swiper-pagination
 
   .laptop\:justify-evenly {
     justify-content: space-evenly !important;
+  }
+
+  .laptop\:justify-end {
+    justify-content: flex-end !important;
   }
 
   .laptop\:gap-10 {

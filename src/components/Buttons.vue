@@ -35,7 +35,7 @@ export default {
             type: String,
             default: 'blue',
             validator: color => {
-                return['blue', 'red', 'white'].includes(color)
+                return['blue', 'red', 'white', 'beige'].includes(color)
             }
         }
     },
@@ -79,6 +79,13 @@ export default {
 }
 .button.-is-white svg {
     stroke: rgb(233 156 108 / var(--tw-text-opacity));
+}
+.button.-is-beige{
+    background-color: rgb(235 200 157  / var(--tw-bg-opacity));
+    color: rgb(12 39 80 / var(--tw-text-opacity));
+}
+.button.-is-beige svg {
+    stroke: rgb(12 39 80/ var(--tw-text-opacity));
 }
 .button_secondary {
     margin-top: 0.5rem;
