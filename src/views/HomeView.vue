@@ -2,7 +2,7 @@
 </script>
 
 <template>
-  <main>
+    <main>
     <TheWelcome />
-  </main>
+    </main>
 </template>
