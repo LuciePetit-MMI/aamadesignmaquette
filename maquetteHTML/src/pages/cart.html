@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--connection google font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!--font secular one-->
+    <link href="https://fonts.googleapis.com/css2?family=Secular+One&display=swap" rel="stylesheet">    
+    <!--font quicksand-->
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
+    <!--font sao torpes-->
+    <style type="text/css">
+        @font-face {
+            font-family: "Sao Torpes";
+            src: url(./src/font/SaoTorpes.otf) format("opentype");
+        }
+    </style>
+    <!-- Swiper Js -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="./src/images/favicon.svg">
+
+    <link rel="stylesheet" href="../../dist/main.css">
+    <title>Aama Design | Mon compte</title>
+</head>
+<body>
+    <header class="overflow-hidden relative">
+        <div class="fixed z-50 backdrop-blur">
+            <div class="menu relative flex flex-row justify-between items-center w-screen px-5 py-2">
+                <div class="burger flex flex-col justify-between h-6 z-50 laptop:hidden">
+                    <span class="burger__line w-10 h-1 bg-marine rounded-full block"></span>
+                    <span class="burger__line w-10 h-1 bg-marine rounded-full block"></span>
+                    <span class="burger__line w-10 h-1 bg-marine rounded-full block"></span>
+                </div>
+    
+                <a href="../../index.html"><img src="/src/images/logo.svg" alt="" class="logo z-50"></a>
+    
+                <i class="w-10 h-10 bg-marine z-50 laptop:hidden"><a href=""></a></i>
+                <nav class="hidden absolute top-0 left-0 w-screen h-screen flex flex-col items-center justify-center bg-white text-center z-10 laptop:static laptop:max-w-fit laptop:block laptop:h-full laptop:bg-[transparent]">
+                    <ul class="flex flex-col laptop:flex-row">
+                        <li class="mb-8 laptop:mb-0 laptop:mr-8"><a href="../../index.html" class="font-saotorpes text-marine text-2xl">Accueil</a></li>
+                        <li class="mb-8 laptop:mb-0 laptop:mr-8"><a href="./lampes.html" class="font-saotorpes text-marine text-2xl">Ciluzio</a></li>
+                        <li class="mb-8 laptop:mb-0 laptop:mr-8"><a href="./cart.html" class="font-saotorpes text-marine text-2xl">Panier</a></li>
+                        <li class="mb-8 laptop:mb-0 laptop:mr-8"><a href="./account.html" class="font-saotorpes text-marine text-2xl">Mon compte</a></li>
+                    </ul>
+                </nav>
+            </div>    
+        </div>        
+    </header>
+    <main class="px-5 laptop:px-20 mt-24">
+        <div class="w-full">
+            <h2 class="h2 mb-1">Récapitulatif panier 1/4</h2>
+            <div class="w-1/4 h-1 bg-marine"></div>
+        </div>
+        <div class="panier h-[85vh]">
+            <div class="panier_items">
+                <div class="panier_items_card border-b-2 h-fit border-black">
+                    <img class="w-full h-1/2 object-cover object-bottom" src="../images/samuel-piccolo.webp" alt=""/>
+                    <div class="h-min">
+                        <div class="flex flex-row justify-between items-baseline">
+                            <p class="h3">Nom du produit</p>
+                            <span class="">490 €</span>    
+                        </div>
+                        <div>
+                            <p class="text-sm mb-0">Hauteur : 110 cm</p>
+                            <p class="text-sm mb-0">Étagère(s) : 1</p>
+                            <p class="text-sm">Couleurs : Rose, Turquoise, Bleu marine</p>
+                        </div>
+                        <div class="flex flex-row justify-between">
+                            <p class="">
+                                Quantité : 
+                                <button> - </button>
+                                1
+                                <button> +</button>
+                            </p>
+                            <span class="">Supprimer</span>    
+                        </div>
+                    </div>    
+                </div>
+                <button class="button bg-marine text-white ml-auto my-4">Suivant
+                    <svg width="28" height="16" viewBox="0 0 28 16" fill="none" class="stroke-white">
+                        <path d="M1 8H26" stroke-width="2" stroke-linecap="round"/>
+                        <path d="M19.5 1.5L26 8L19.5 14.5" stroke-width="2" stroke-linecap="round"/>
+                    </svg> 
+                </button>
+            </div>
+            <div class="recap fixed -ml-5 p-10 bg-marine flex flex-col justify-between laptop:static laptop:m-10 laptop:h-[60vh]">
+                <div>
+                    <h4 class="h4 m-0 text-white">Récapitulatif</h4>
+                    <p class="font-bold text-white mb-0 mt-4">Produits</p>
+                    <div class="flex flex-row justify-between">
+                        <p class="text-white text-sm my-1">Piccolo Agathe</p>
+                        <p class="text-white text-sm my-1">490 €</p>
+                    </div>
+                    <div class="flex flex-row justify-between">
+                        <p class="text-white text-sm my-1">Medio personnalisée</p>
+                        <p class="text-white text-sm my-1">750 €</p>
+                    </div>
+                    <p class="font-bold text-white mb-0 mt-4">Réduction</p>
+                    <div class="flex flex-row justify-between">
+                        <p class="text-white text-sm my-1">Aucune réduction</p>
+                        <p class="text-white text-sm my-1">490 €</p>
+                    </div>    
+                </div>
+                <div>
+                    <div class="flex flex-row justify-between">
+                        <p class="text-white font-bold">Total panier</p>
+                        <p class="text-white font-bold">1240 €</p>    
+                    </div>
+                    <form action="" class="flex flex-row">
+                        <label for="" class="hidden">Code promo</label>
+                        <input type="text" placeholder="Code promo" class="border-solid border-2 border-beige rounded-full bg-[transparent] px-4 py-2 m-0 placeholder:text-beige">
+                        <input type="submit" value="Appliquer" class="button bg-beige text-marine m-0">
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="panier panier_adresse">
+            <div class="panier_adresse_form">
+                <form action="" class="flex flex-col">
+                    <label for="" class="text-marine font-bold">Nom Prénom</label>
+                    <input type="text" placeholder="Lorem Ipsum" class="border-2 border-marine rounded-lg px-2 py-1">
+                    <label for="" class="text-marine font-bold">Rue</label>
+                    <input type="text" placeholder="Lorem Ipsum" class="border-2 border-marine rounded-lg px-2 py-1">
+                    <label for="" class="text-marine font-bold">Complément d'adresse</label>
+                    <input type="text" placeholder="Lorem Ipsum" class="border-2 border-marine rounded-lg px-2 py-1">
+                    <div class="flex flex-col laptop:flex-row laptop:justify-between">
+                        <div class="flex flex-col laptop:w-1/2">
+                            <label for="" class="text-marine font-bold">Code postal</label>
+                            <input type="text" placeholder="Lorem Ipsum" class="border-2 border-marine rounded-lg px-2 py-1 laptop:w-fit">    
+                        </div>
+                        <div class="flex flex-col laptop:w-1/2">
+                            <label for="" class="text-marine font-bold">Ville</label>
+                            <input type="text" placeholder="Lorem Ipsum" class="border-2 border-marine rounded-lg px-2 py-1 laptop:w-fit">
+                        </div>
+                    </div>
+                    <label for="" class="text-marine font-bold">Pays</label>
+                    <input type="text" placeholder="Lorem Ipsum" class="border-2 border-marine rounded-lg px-2 py-1 laptop:w-fit">
+                </form>
+                <button class="button bg-marine text-white ml-auto my-4">Suivant
+                    <svg width="28" height="16" viewBox="0 0 28 16" fill="none" class="stroke-white">
+                        <path d="M1 8H26" stroke-width="2" stroke-linecap="round"/>
+                        <path d="M19.5 1.5L26 8L19.5 14.5" stroke-width="2" stroke-linecap="round"/>
+                    </svg> 
+                </button>
+            </div>
+            <div class="recap fixed -ml-5 p-10 bg-marine flex flex-col justify-between laptop:static laptop:m-10 laptop:h-[60vh]">
+                <div>
+                    <h4 class="h4 m-0 text-white">Récapitulatif</h4>
+                    <p class="font-bold text-white mb-0 mt-4">Produits</p>
+                    <div class="flex flex-row justify-between">
+                        <p class="text-white text-sm my-1">Piccolo Agathe</p>
+                        <p class="text-white text-sm my-1">490 €</p>
+                    </div>
+                    <div class="flex flex-row justify-between">
+                        <p class="text-white text-sm my-1">Medio personnalisée</p>
+                        <p class="text-white text-sm my-1">750 €</p>
+                    </div>
+                    <p class="font-bold text-white mb-0 mt-4">Réduction</p>
+                    <div class="flex flex-row justify-between">
+                        <p class="text-white text-sm my-1">Aucune réduction</p>
+                        <p class="text-white text-sm my-1">490 €</p>
+                    </div>    
+                </div>
+                <div>
+                    <div class="flex flex-row justify-between">
+                        <p class="text-white font-bold">Total panier</p>
+                        <p class="text-white font-bold">1240 €</p>    
+                    </div>
+                    <form action="" class="flex flex-row">
+                        <label for="" class="hidden">Code promo</label>
+                        <input type="text" placeholder="Code promo" class="border-solid border-2 border-beige rounded-full bg-[transparent] px-4 py-2 m-0 placeholder:text-beige">
+                        <input type="submit" value="Appliquer" class="button bg-beige text-marine m-0">
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="panier panier_livraison">
+            <div class="panier_livraison_items">
+                <div class="border-b-2 h-fit border-black">
+                    <div>
+                        <div class="flex flex-row justify-between items-baseline">
+                            <p class="h3 mb-2">Mode de livraison</p>
+                            <input type="radio" class="">
+                        </div>
+                        <div class="flex flex-row">
+                            <p class="text-sm mr-20">Colissimo <br/>2 à 5 jours ouvrés</p>
+                            <p>8.99 €</p>  
+                        </div>
+                    </div>    
+                </div>
+
+                <button class="button bg-marine text-white ml-auto my-4">Suivant
+                    <svg width="28" height="16" viewBox="0 0 28 16" fill="none" class="stroke-white">
+                        <path d="M1 8H26" stroke-width="2" stroke-linecap="round"/>
+                        <path d="M19.5 1.5L26 8L19.5 14.5" stroke-width="2" stroke-linecap="round"/>
+                    </svg> 
+                </button>
+            </div>
+            <div class="recap fixed -ml-5 p-10 bg-marine flex flex-col justify-between laptop:static laptop:m-10 laptop:h-[60vh]">
+                <div>
+                    <h4 class="h4 m-0 text-white">Récapitulatif</h4>
+                    <p class="font-bold text-white mb-0 mt-4">Produits</p>
+                    <div class="flex flex-row justify-between">
+                        <p class="text-white text-sm my-1">Piccolo Agathe</p>
+                        <p class="text-white text-sm my-1">490 €</p>
+                    </div>
+                    <div class="flex flex-row justify-between">
+                        <p class="text-white text-sm my-1">Medio personnalisée</p>
+                        <p class="text-white text-sm my-1">750 €</p>
+                    </div>
+                    <p class="font-bold text-white mb-0 mt-4">Réduction</p>
+                    <div class="flex flex-row justify-between">
+                        <p class="text-white text-sm my-1">Aucune réduction</p>
+                        <p class="text-white text-sm my-1">490 €</p>
+                    </div>    
+                </div>
+                <div>
+                    <div class="flex flex-row justify-between">
+                        <p class="text-white font-bold">Total panier</p>
+                        <p class="text-white font-bold">1240 €</p>    
+                    </div>
+                    <form action="" class="flex flex-row">
+                        <label for="" class="hidden">Code promo</label>
+                        <input type="text" placeholder="Code promo" class="border-solid border-2 border-beige rounded-full bg-[transparent] px-4 py-2 m-0 placeholder:text-beige">
+                        <input type="submit" value="Appliquer" class="button bg-beige text-marine m-0">
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="panier panier_adresse">
+            <div class="panier_adresse_form">
+                <form action="" class="flex flex-col">
+                    <label for="" class="text-marine font-bold">Titulaire de la carte</label>
+                    <input type="text" placeholder="Nom Prénom" class="border-2 border-marine rounded-lg px-2 py-1">
+                    <label for="" class="text-marine font-bold">Numéro de la carte</label>
+                    <input type="text" placeholder="XXXX XXXX XXXX XXXX XXXX" class="border-2 border-marine rounded-lg px-2 py-1">
+                    <div class="flex flex-col laptop:flex-row laptop:justify-between">
+                        <div class="flex flex-col laptop:w-1/2">
+                            <label for="" class="text-marine font-bold">Date d'éxpiration</label>
+                            <input type="text" placeholder="11/12" class="border-2 border-marine rounded-lg px-2 py-1 laptop:w-fit">    
+                        </div>
+                        <div class="flex flex-col laptop:w-1/2">
+                            <label for="" class="text-marine font-bold">Cryptogramme visuel</label>
+                            <input type="text" placeholder="XXX" class="border-2 border-marine rounded-lg px-2 py-1 laptop:w-fit">
+                        </div>
+                    </div>
+                </form>
+                <button class="button bg-marine text-white ml-auto my-4">Valider
+                    <svg width="28" height="16" viewBox="0 0 28 16" fill="none" class="stroke-white">
+                        <path d="M1 8H26" stroke-width="2" stroke-linecap="round"/>
+                        <path d="M19.5 1.5L26 8L19.5 14.5" stroke-width="2" stroke-linecap="round"/>
+                    </svg> 
+                </button>
+            </div>
+            <div class="recap fixed -ml-5 p-10 bg-marine flex flex-col justify-between laptop:static laptop:m-10 laptop:h-[60vh]">
+                <div>
+                    <h4 class="h4 m-0 text-white">Récapitulatif</h4>
+                    <p class="font-bold text-white mb-0 mt-4">Produits</p>
+                    <div class="flex flex-row justify-between">
+                        <p class="text-white text-sm my-1">Piccolo Agathe</p>
+                        <p class="text-white text-sm my-1">490 €</p>
+                    </div>
+                    <div class="flex flex-row justify-between">
+                        <p class="text-white text-sm my-1">Medio personnalisée</p>
+                        <p class="text-white text-sm my-1">750 €</p>
+                    </div>
+                    <p class="font-bold text-white mb-0 mt-4">Réduction</p>
+                    <div class="flex flex-row justify-between">
+                        <p class="text-white text-sm my-1">Aucune réduction</p>
+                        <p class="text-white text-sm my-1">490 €</p>
+                    </div>    
+                </div>
+                <div>
+                    <div class="flex flex-row justify-between">
+                        <p class="text-white font-bold">Total panier</p>
+                        <p class="text-white font-bold">1240 €</p>    
+                    </div>
+                    <form action="" class="flex flex-row">
+                        <label for="" class="hidden">Code promo</label>
+                        <input type="text" placeholder="Code promo" class="border-solid border-2 border-beige rounded-full bg-[transparent] px-4 py-2 m-0 placeholder:text-beige">
+                        <input type="submit" value="Appliquer" class="button bg-beige text-marine m-0">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="px-5 laptop:px-20 py-5 bg-skin laptop:flex laptop:flex-rows laptop:w-full laptop:justify-evenly">
+        <div class="footer_info">
+            <h3 class="h4 text-marine">Informations</h3>
+            <p><a href="">Livraison et retours</a></p>
+            <p><a href="">Documents techniques</a></p>
+            <p><a href="">CGV</a></p>
+            <p><a href="">Mentions légales</a></p>
+        </div>
+        <div class="footer_contact">
+            <h3 class="h4 text-marine">Contact</h3>
+            <p><a href="">Mail</a></p>
+            <p><a href="">Facebook</a></p>
+            <p><a href="">Instagram</a></p>
+            <p><a href="">Pinterest</a></p>
+        </div>
+        <div class="footer_newslettre">
+            <h3 class="h4 text-marine">Newsletter</h3>
+            <form action="" class="flex flex-col">
+                <label for="" class="hidden">Email</label>
+                <input type="email" placeholder="Email" class="border-solid border-2 border-marine rounded-full bg-[transparent] px-4 py-2 mb-3 placeholder:text-marine">
+                <input type="submit" value="S'inscrire" class="button bg-marine">
+            </form>
+        </div>
+    </footer>
+</body>
+</html>
