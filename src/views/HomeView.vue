@@ -36,30 +36,13 @@
               :modules="modules"
             >
               <swiper-slide class="relative w-fit">
-                <div class="absolute top-0 left-0 h-full w-full p-5 flex flex-col justify-between">
-                            <p class="text-white">Modèle</p>
-                            <div class="flex flex-row justify-between items-baseline">
-                                <p class="font-bold text-white">Prix €€€</p>
-                                <Button :secondary="true" :color="'white'">Acheter</Button>    
-                            </div>
-                        </div>
-                        <div class="relative -z-10">
-                            <img src="../assets/images/product_card.svg" alt="">
-                            <img src="../assets/images/product_image.png" alt="" class="absolute top-0 left-0">
-                        </div>
+                <ProductCard/>
               </swiper-slide>
               <swiper-slide class="relative w-fit">
-                <div class="absolute top-0 left-0 h-full w-full p-5 flex flex-col justify-between">
-                            <p class="text-white">Modèle</p>
-                            <div class="flex flex-row justify-between items-baseline">
-                                <p class="font-bold text-white">Prix €€€</p>
-                                <p class="button_secondary text-white border-white">Acheter</p>    
-                            </div>
-                        </div>
-                        <div class="relative -z-10">
-                            <img src="../assets/images/product_card.svg" alt="">
-                            <img src="../assets/images/product_image.png" alt="" class="absolute top-0 left-0">
-                        </div>
+                <ProductCard/>
+              </swiper-slide>
+              <swiper-slide class="relative w-fit">
+                <ProductCard/>
               </swiper-slide>
             </swiper>
             <Button :link="'/ciluzio'" :secondary="true" class="self-center">Toutes nos lampes</Button>
@@ -147,6 +130,7 @@
 
 <script>
 import Button from '@/components/Buttons.vue';
+import ProductCard from '@/components/ProductCard.vue';
 
 // Import Swiper Vue.js components
 import { Swiper, SwiperSlide } from 'swiper/vue';
@@ -157,11 +141,7 @@ import { Pagination } from "swiper";
 
 
 export default {
-  components: {
-    Swiper,
-    SwiperSlide,
-    Button,
-  },
+  components: { Swiper, SwiperSlide, Button, ProductCard, },
   setup() {
     const onSwiper = (swiper) => {
       console.log(swiper);
