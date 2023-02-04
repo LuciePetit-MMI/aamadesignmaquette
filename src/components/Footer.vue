@@ -9,7 +9,7 @@
         </div>
         <div class="footer_contact">
             <h3 class="h4 text-marine">Contact</h3>
-            <p><a href="">Mail</a></p>
+            <p><RouterLink to="/contact">Mail</RouterLink></p>
             <p><a href="">Facebook</a></p>
             <p><a href="">Instagram</a></p>
             <p><a href="">Pinterest</a></p>
