@@ -1580,6 +1580,10 @@ body > main > div.products.flex.inspi_card__colors > div > div.swiper-pagination
   align-self: flex-end !important;
 }
 
+.self-start {
+  align-self: flex-start !important;
+}
+
 .self-center {
   align-self: center !important;
 }
