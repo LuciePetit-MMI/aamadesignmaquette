@@ -8,28 +8,14 @@
                     <h2 class="h2 mb-1">Récapitulatif panier 1/4</h2>
                     <div class="w-1/4 h-1 bg-marine"></div>
                 </div>
-                <div class="panier_items_card border-b-2 h-fit border-black">
-                    <img class="w-full h-1/2 object-cover object-bottom" src="../assets/images/victor-medio.webp" alt=""/>
-                    <div class="h-min">
-                        <div class="flex flex-row justify-between items-baseline">
-                            <p class="h3">Nom du produit</p>
-                            <span class="">490 €</span>    
-                        </div>
-                        <div>
-                            <p class="text-sm mb-0">Hauteur : 110 cm</p>
-                            <p class="text-sm mb-0">Étagère(s) : 1</p>
-                            <p class="text-sm">Couleurs : Rose, Turquoise, Bleu marine</p>
-                        </div>
-                        <div class="flex flex-row justify-between">
-                            <p class="">
-                                Quantité : 
-                                <button> - </button>
-                                1
-                                <button> +</button>
-                            </p>
-                            <span class="">Supprimer</span>    
-                        </div>
-                    </div>    
+                <div v-if="$store.state.cart.length">
+                    <div v-for="(product, index) in $store.state.cart" :key="index">
+                        <ProductCart :id="product.id" :name="product.name" :price="product.price" :images="product.images" :quantity="product.quantity" :dimensions="product.dimensions" :description="product.description"></ProductCart>
+                    </div>
+                </div>
+                
+                <div v-else>
+                    <p>Votre panier est vide, <RouterLink to="/Ciluzio" class="underline text-orange">créez votre lampe dès maintenant</RouterLink></p>
                 </div>
                 <div class="flex flex-row justify-between laptop:justify-end">
                     <Button :link="'/ciluzio'" :secondary="true">Continuer mes achats</Button>
@@ -63,7 +49,7 @@
                         <input type="text" placeholder="Lorem Ipsum" class="border-2 border-marine rounded-lg px-2 py-1 laptop:w-fit">
                         <div class="flex flex-row items-baseline">
                             <input type="checkbox" id="other-address" v-model="otherAddress">
-                            <label for="other-address">Utiliser une autre adresse de facturation</label>
+                            <label for="other-address">Utiliser une adresse de facturation différente</label>
                         </div>
                     </div>
                     <div class="order-view__shipping flex flex-col" v-if="otherAddress">
@@ -144,30 +130,16 @@
                 <div>
                     <h4 class="h4 m-0 text-white">Récapitulatif</h4>
                     <p class="font-bold text-white mb-0 mt-4">Produits</p>
-                    <div class="flex flex-row justify-between">
-                        <p class="text-white text-sm my-1">Piccolo Agathe</p>
-                        <p class="text-white text-sm my-1">490 €</p>
+                    <div v-for="(product, index) in $store.state.cart" :key="index" class="flex flex-row justify-between">
+                        <p class="text-white text-sm my-1">{{product.quantity}} x {{product.name}}</p>
+                        <p class="text-white text-sm my-1">{{product.price}} €</p>
                     </div>
-                    <div class="flex flex-row justify-between">
-                        <p class="text-white text-sm my-1">Medio personnalisée</p>
-                        <p class="text-white text-sm my-1">750 €</p>
-                    </div>
-                    <p class="font-bold text-white mb-0 mt-4">Réduction</p>
-                    <div class="flex flex-row justify-between">
-                        <p class="text-white text-sm my-1">Aucune réduction</p>
-                        <p class="text-white text-sm my-1">490 €</p>
-                    </div>    
                 </div>
                 <div>
                     <div class="flex flex-row justify-between">
                         <p class="text-white font-bold">Total panier</p>
-                        <p class="text-white font-bold">1240 €</p>    
+                        <p class="text-white font-bold">{{cartTotal}} €</p>    
                     </div>
-                    <form action="" class="flex flex-row">
-                        <label for="" class="hidden">Code promo</label>
-                        <input type="text" placeholder="Code promo" class="border-solid border-2 border-beige rounded-full bg-[transparent] px-4 py-2 m-0 placeholder:text-beige">
-                        <Button type="submit" :color="'beige'">Appliquer</Button>
-                    </form>
                 </div>
             </div>
         </div>
@@ -178,14 +150,23 @@
 
 <script>
 import Button from '@/components/Buttons.vue';
+import ProductCart from '@/components/ProductCart.vue';
 
 export default{
-    components: { Button },
+    components: { Button, ProductCart, },
     data(){
         return{
             step: '1',
             otherAddress: false,
         }
+    },
+    computed:{
+        cartTotal() {
+            return this.$store.state.cart.reduce((total, product) => {
+                total += product.price * product.quantity;
+                return total;
+            }, 0);
+        },
     }
 }
 </script>

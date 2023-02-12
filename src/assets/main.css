@@ -517,7 +517,7 @@ p, input, label, a {
 }
 
 @media (min-width: 1024px) {
-  p, input, label, a {
+  p, input, label, a, button {
     font-size: 1.125rem;
     line-height: 1.75rem;
   }
