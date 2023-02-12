@@ -8,150 +8,19 @@
                 :centered-slides="true"
                 :navigation="true"
                 :modules="modules"
-            >
-                <swiper-slide class="text-center h-full w-screen flex flex-col justify-between laptop:h-[60vh] laptop:w-1/3">
-                        <p>Nom de la lampe</p>
+            >           
+                <swiper-slide v-for="(product, index) in products" :key="index" class="text-center h-full w-screen flex flex-col justify-between laptop:h-[60vh] laptop:w-1/3">
+                        <p>{{product.name}}</p>
+                        
                         <div class="flex flex-row w-full">
-                            <div class="h-full w-1/3 text-center">
-                                <img src="../assets/images/nude-piccolo.webp" alt="" class="laptop:h-[40vh] laptop:mx-auto">
-                                <p  >490 €</p>
-                            </div>
-                            <div class="h-full w-1/3 text-center">
-                                <img src="../assets/images/victor-medio.webp" alt="" class="laptop:h-[40vh] laptop:mx-auto">
-                                <p  >750 €</p>
-                            </div>
-                            <div class="h-full w-1/3 text-center">
-                                <img src="../assets/images/nude_grande.png" alt="" class="laptop:h-[40vh] laptop:mx-auto">
-                                <p  >890 €</p>
+                            <div @click="activeProduct(variation)" v-for="(variation, index) in variations" :key="index">
+                                <div v-if="variation.parent_id === product.id" class="h-full text-center">
+                                    <img v-for="(image, index) in variation.images" :key="index" :src="image.src" :alt="image.alt" class="laptop:h-[40vh] laptop:mx-auto">
+                                    <p>{{variation.price}}€</p>
+                                </div>
                             </div>
                         </div>
-                        <Button      :svg="true" class="self-center">Acheter</Button>
-                </swiper-slide>
-                <swiper-slide class="text-center h-full w-screen flex flex-col justify-between laptop:h-[60vh] laptop:w-1/3">
-                        <p>Nom de la lampe</p>
-                        <div class="flex flex-row w-full">
-                            <div class="h-full w-1/3 text-center">
-                                <img src="../assets/images/nude-piccolo.webp" alt="" class="laptop:h-[40vh] laptop:mx-auto">
-                                <p>490 €</p>
-                            </div>
-                            <div class="h-full w-1/3 text-center">
-                                <img src="../assets/images/victor-medio.webp" alt="" class="laptop:h-[40vh] laptop:mx-auto">
-                                <p>750 €</p>
-                            </div>
-                            <div class="h-full w-1/3 text-center">
-                                <img src="../assets/images/nude_grande.png" alt="" class="laptop:h-[40vh] laptop:mx-auto">
-                                <p>890 €</p>
-                            </div>
-                        </div>
-                        <Button :svg="true" class="self-center">Acheter</Button>
-                </swiper-slide>
-                <swiper-slide class="text-center h-full w-screen flex flex-col justify-between laptop:h-[60vh] laptop:w-1/3">
-                        <p>Nom de la lampe</p>
-                        <div class="flex flex-row w-full">
-                            <div class="h-full w-1/3 text-center">
-                                <img src="../assets/images/nude-piccolo.webp" alt="" class="laptop:h-[40vh] laptop:mx-auto">
-                                <p>490 €</p>
-                            </div>
-                            <div class="h-full w-1/3 text-center">
-                                <img src="../assets/images/victor-medio.webp" alt="" class="laptop:h-[40vh] laptop:mx-auto">
-                                <p>750 €</p>
-                            </div>
-                            <div class="h-full w-1/3 text-center">
-                                <img src="../assets/images/nude_grande.png" alt="" class="laptop:h-[40vh] laptop:mx-auto">
-                                <p>890 €</p>
-                            </div>
-                        </div>
-                        <Button :svg="true" class="self-center">Acheter</Button>
-                </swiper-slide>
-                <swiper-slide class="text-center h-full w-screen flex flex-col justify-between laptop:h-[60vh] laptop:w-1/3">
-                        <p>Nom de la lampe</p>
-                        <div class="flex flex-row w-full">
-                            <div class="h-full w-1/3 text-center">
-                                <img src="../assets/images/nude-piccolo.webp" alt="" class="laptop:h-[40vh] laptop:mx-auto">
-                                <p>490 €</p>
-                            </div>
-                            <div class="h-full w-1/3 text-center">
-                                <img src="../assets/images/victor-medio.webp" alt="" class="laptop:h-[40vh] laptop:mx-auto">
-                                <p>750 €</p>
-                            </div>
-                            <div class="h-full w-1/3 text-center">
-                                <img src="../assets/images/nude_grande.png" alt="" class="laptop:h-[40vh] laptop:mx-auto">
-                                <p>890 €</p>
-                            </div>
-                        </div>
-                        <Button :svg="true" class="self-center">Acheter</Button>
-                </swiper-slide>
-                <swiper-slide class="text-center h-full w-screen flex flex-col justify-between laptop:h-[60vh] laptop:w-1/3">
-                        <p>Nom de la lampe</p>
-                        <div class="flex flex-row w-full">
-                            <div class="h-full w-1/3 text-center">
-                                <img src="../assets/images/nude-piccolo.webp" alt="" class="laptop:h-[40vh] laptop:mx-auto">
-                                <p  >490 €</p>
-                            </div>
-                            <div class="h-full w-1/3 text-center">
-                                <img src="../assets/images/victor-medio.webp" alt="" class="laptop:h-[40vh] laptop:mx-auto">
-                                <p  >750 €</p>
-                            </div>
-                            <div class="h-full w-1/3 text-center">
-                                <img src="../assets/images/nude_grande.png" alt="" class="laptop:h-[40vh] laptop:mx-auto">
-                                <p  >890 €</p>
-                            </div>
-                        </div>
-                        <Button      :svg="true" class="self-center">Acheter</Button>
-                </swiper-slide>
-                <swiper-slide class="text-center h-full w-screen flex flex-col justify-between laptop:h-[60vh] laptop:w-1/3">
-                        <p>Nom de la lampe</p>
-                        <div class="flex flex-row w-full">
-                            <div class="h-full w-1/3 text-center">
-                                <img src="../assets/images/nude-piccolo.webp" alt="" class="laptop:h-[40vh] laptop:mx-auto">
-                                <p>490 €</p>
-                            </div>
-                            <div class="h-full w-1/3 text-center">
-                                <img src="../assets/images/victor-medio.webp" alt="" class="laptop:h-[40vh] laptop:mx-auto">
-                                <p>750 €</p>
-                            </div>
-                            <div class="h-full w-1/3 text-center">
-                                <img src="../assets/images/nude_grande.png" alt="" class="laptop:h-[40vh] laptop:mx-auto">
-                                <p>890 €</p>
-                            </div>
-                        </div>
-                        <Button :svg="true" class="self-center">Acheter</Button>
-                </swiper-slide>
-                <swiper-slide class="text-center h-full w-screen flex flex-col justify-between laptop:h-[60vh] laptop:w-1/3">
-                        <p>Nom de la lampe</p>
-                        <div class="flex flex-row w-full">
-                            <div class="h-full w-1/3 text-center">
-                                <img src="../assets/images/nude-piccolo.webp" alt="" class="laptop:h-[40vh] laptop:mx-auto">
-                                <p>490 €</p>
-                            </div>
-                            <div class="h-full w-1/3 text-center">
-                                <img src="../assets/images/victor-medio.webp" alt="" class="laptop:h-[40vh] laptop:mx-auto">
-                                <p>750 €</p>
-                            </div>
-                            <div class="h-full w-1/3 text-center">
-                                <img src="../assets/images/nude_grande.png" alt="" class="laptop:h-[40vh] laptop:mx-auto">
-                                <p>890 €</p>
-                            </div>
-                        </div>
-                        <Button :svg="true" class="self-center">Acheter</Button>
-                </swiper-slide>
-                <swiper-slide class="text-center h-full w-screen flex flex-col justify-between laptop:h-[60vh] laptop:w-1/3">
-                        <p>Nom de la lampe</p>
-                        <div class="flex flex-row w-full">
-                            <div class="h-full w-1/3 text-center">
-                                <img src="../assets/images/nude-piccolo.webp" alt="" class="laptop:h-[40vh] laptop:mx-auto">
-                                <p>490 €</p>
-                            </div>
-                            <div class="h-full w-1/3 text-center">
-                                <img src="../assets/images/victor-medio.webp" alt="" class="laptop:h-[40vh] laptop:mx-auto">
-                                <p>750 €</p>
-                            </div>
-                            <div class="h-full w-1/3 text-center">
-                                <img src="../assets/images/nude_grande.png" alt="" class="laptop:h-[40vh] laptop:mx-auto">
-                                <p>890 €</p>
-                            </div>
-                        </div>
-                        <Button :svg="true" class="self-center">Acheter</Button>
+                        <div @click="addToCart" class="self-center"><Button :svg="true">Acheter</Button></div>
                 </swiper-slide>
             </swiper>
         </div>
@@ -159,17 +28,23 @@
 </template>
 
 <script>
+import { client } from "@/utils/axios";
+
 import Button from '@/components/Buttons.vue'
-// Import Swiper Vue.js components
 import { Swiper, SwiperSlide } from 'swiper/vue';
-// Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/navigation';
-// import required modules
 import { Navigation } from 'swiper';;
 
 export default{
     components: { Swiper, SwiperSlide, Button, },
+    data(){
+        return{
+            products: [],
+            variations: [],
+            product: {},
+        }
+    },
     setup() {
         const onSwiper = (swiper) => {
             console.log(swiper);
@@ -183,17 +58,46 @@ export default{
             modules: [Navigation],
         };
     },
+    async mounted() {
+        await this.getProductData();
+    },
+    async beforeRouteUpdate(to, from) {
+        await this.getProductData(to.params.product);
+    },
+    methods: {
+        // Get WooCommerce product data by slug
+        async getProductData () {
+            const response = await client.get('wc/v3/products?category=51')
+            this.products = response.data
+
+            for (const product of this.products){
+                if (product.type === 'variable') {
+
+                    for (const id of product.variations) {
+                        const response = await client.get('/wc/v3/products/' + id)
+                        this.variations.push(response.data)
+                    }
+                }
+            }
+        },
+        activeProduct(variation){
+            this.product = variation
+        },
+        addToCart(){
+            this.$store.commit('add', { product:this.product, quantity:1 })
+        },
+    },
 }
 </script>
 
 <style scoped>
 div.swiper-wrapper > div > div > div > p, 
-div.swiper-wrapper > div.swiper-slide > div.self-center{
+div.swiper-wrapper > div.swiper-slide > div.self-center > div{
     visibility: hidden!important;
 }
 
 div.swiper-wrapper > div.swiper-slide.text-center.h-full.w-screen.flex.flex-col.justify-between.laptop\:h-\[60vh\].laptop\:w-1\/3.swiper-slide-active > div.flex.flex-row.w-full > div > p, 
-#app > div > div:nth-child(2) > div > div:nth-child(2) > div:nth-child(2) > div > div > div.swiper-wrapper > div.swiper-slide.text-center.h-full.w-screen.flex.flex-col.justify-between.laptop\:h-\[60vh\].laptop\:w-1\/3.swiper-slide-active > div.self-center{
+#app > div > div:nth-child(2) > div > div:nth-child(2) > div:nth-child(2) > div > div > div.swiper-wrapper > div.swiper-slide.text-center.h-full.w-screen.flex.flex-col.justify-between.laptop\:h-\[60vh\].laptop\:w-1\/3.swiper-slide-active > div.self-center > div{
     visibility: visible!important;
 }
 </style>

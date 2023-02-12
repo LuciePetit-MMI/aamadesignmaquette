@@ -1540,6 +1540,10 @@ body > main > div.products.flex.inspi_card__colors > div > div.swiper-pagination
   flex-wrap: wrap !important;
 }
 
+.grow {
+  flex-grow: 1!important;
+}
+
 .place-items-end {
   place-items: end !important;
 }
@@ -2409,6 +2413,11 @@ body > main > div.products.flex.inspi_card__colors > div > div.swiper-pagination
   .laptop\:text-8xl {
     font-size: 6rem !important;
     line-height: 1 !important;
+  }
+
+  #app > div > div:nth-child(2) > div > div:nth-child(2) > div:nth-child(2) > div > div > div.swiper-button-next,
+  #app > div > div:nth-child(2) > div > div:nth-child(2) > div:nth-child(2) > div > div > div.swiper-button-prev{
+    display: none;
   }
 }
 

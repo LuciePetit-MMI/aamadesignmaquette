@@ -16,19 +16,19 @@
                 </svg>
             </div>
             <div>
-                <div class="navigation mb-32 laptop:my-4">
+                <div class="navigation mb-32 laptop:my-10">
                     <div class="flex flex-wrap w-full justify-between place-items-end laptop:w-1/3 laptop:mx-auto">
                         <p @click="view = 'totems'" :class="{ active: view==='totems'}" class="relative cursor-pointer">
                             <span class="underline block h-1 absolute -inset-x-2 -bottom-2 top-8 bg-marine" aria-hidden="true"></span>
-                            <p class="text relative">Totems</p>
+                            <span class="text relative">Totems</span>
                         </p>
                         <p @click="view = 'custom'" :class="{ active: view==='custom' }" class="relative cursor-pointer">
                             <span class="underline block h-1 absolute -inset-x-2 -bottom-2 top-8 bg-light-red" aria-hidden="true"></span>
-                            <p class="text relative">Personnaliser</p>
+                            <span class="text relative">Personnaliser</span>
                         </p>
                         <p @click="view = 'random'" :class="{ active: view==='random' }" class="relative cursor-pointer">
                             <span class="underline block h-1 absolute -inset-x-2 -bottom-2 top-8 bg-blue" aria-hidden="true"></span>
-                            <p class="text relative">Générateur</p>
+                            <span class="text relative">Générateur</span>
                         </p>
                     </div>
                 </div>
@@ -51,13 +51,15 @@ export default {
     components:{ Nav, Custom, Totems, Random, },
     data(){
         return{
-            view: 'custom',
+            view: 'totems',
         }
     }
 }
 </script>
 
 <style scoped>
+
+
 .navigation p:hover .underline{
     height: 0.5rem;
 }
