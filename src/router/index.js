@@ -10,6 +10,7 @@ const router = createRouter({
     { path: '/inspirations',          name: 'inspirations',             component: () => import('../views/InspirationView.vue') },
     { path: '/panier',                name: 'panier',                   component: () => import('../views/CartView.vue') },
     { path: '/compte',                name: 'compte',                   component: () => import('../views/AccountView.vue') },
+    { path: '/thank-you',             name: 'cart-order-thank-you',     component: () => import('../views/ThankYouOrder.vue') },
     { path: '/:pathMatch(.*)*',       name: 'page-introuvable',         component: () => import('../views/NotFindView.vue') },
   ]
 })
