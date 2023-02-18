@@ -1128,6 +1128,10 @@ body > main > div.products.flex.inspi_card__colors > div > div.swiper-pagination
   left: 0px !important;
 }
 
+.bottom-0 {
+  bottom: 0rem !important;
+}
+
 .-bottom-2 {
   bottom: -0.5rem !important;
 }
@@ -1932,6 +1936,10 @@ body > main > div.products.flex.inspi_card__colors > div > div.swiper-pagination
   height: 0.5rem !important;
 }
 
+.hover\:cursor-pointer {
+  cursor: pointer;
+}
+
 @media (min-width: 768px) {
   .tablet\:mb-4 {
     margin-bottom: 1rem !important;
@@ -2127,6 +2135,10 @@ body > main > div.products.flex.inspi_card__colors > div > div.swiper-pagination
 
   .laptop\:h-\[60vh\] {
     height: 60vh !important;
+  }
+
+  .laptop\:h-\[70vh\] {
+    height: 70vh !important;
   }
 
   .laptop\:h-96 {
@@ -2353,6 +2365,10 @@ body > main > div.products.flex.inspi_card__colors > div > div.swiper-pagination
 
   .laptop\:flex-row {
     flex-direction: row !important;
+  }
+
+  .laptop\:flex-col {
+    flex-direction: column !important;
   }
 
   .laptop\:justify-between {
