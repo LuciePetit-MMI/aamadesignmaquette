@@ -102,7 +102,7 @@
                     >
                         <swiper-slide v-for="(choice, index) in content.choices" :key="index" class="w-fit">
                                 <img :src="choice.images[0].image.url" :alt="'Cylindre ' + choice.name + ' pour la lampe Ciluzio'">
-                                <p class="hidden">{{ choice.name }}</p>
+                                <p class="hidden"> {{ choice.name }}</p>
                         </swiper-slide>
                     </swiper>
                     <img @click="log(content.layerId)" :src="content.choices[0].images[0].image.url" alt="" class="absolute bottom-0 cursor-pointer">
@@ -115,7 +115,7 @@
         </div>
         <div class="buttons self-end relative">
             <p v-if="step!=='1'" class="text-xl text-marine font-bold"><span v-for="data in product" :key="data.id">{{ data.price }} €</span></p>
-            <Button @click="activeProduct()" v-if="step==='2'" :svg="true">Finaliser</Button>
+            <Button @click="activeProduct" v-if="step==='2'" :svg="true">Finaliser</Button>
             <Button @click="step = '1'" v-if="step==='2'" :secondary="true">Précédent</Button>
             <Button @click="addToCart" v-if="step==='3'" :svg="true">Acheter</Button>
             <Button @click="step = '2'" v-if="step==='3'" :secondary="true">Précédent</Button>
@@ -141,6 +141,7 @@ export default{
             product: [],
             configurator: [],
             customProduct: {},
+            chooseColors: [],
             slug: '',
         }
     },
@@ -179,10 +180,20 @@ export default{
             this.slug = slug
         },
         activeProduct(){
+            //get selected pieces
+            var slides = document.getElementsByClassName("swiper-slide-active")
+            for(var i=0; i < slides.length; i++){
+                //get p content
+                var color =  " " + slides[i].lastElementChild.textContent
+                //add p content to chooseColors
+                this.chooseColors.push(color)
+            }
+            //change step 
             this.step = '3'
-            console.log(this.product)
+            //add product informations to custom product
             this.customProduct = this.product[0]
-
+            //add selected colors to custom product description
+            this.customProduct.description = this.chooseColors
         },
         addToCart(){
             this.$store.commit('add', { product:this.customProduct, quantity:1 })
