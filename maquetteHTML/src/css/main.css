@@ -14,16 +14,16 @@
         @apply font-saotorpes text-marine text-3xl my-6 laptop:text-7xl
     }
     .h2{
-        @apply font-secularone text-black text-4xl my-6
+        @apply font-secularone text-black text-2xl my-6 laptop:text-4xl
     }
     .h3{
-        @apply font-secularone text-black text-3xl my-6
+        @apply font-secularone text-black text-xl my-6 laptop:text-3xl
     }
     .h4{
-        @apply font-secularone text-black text-2xl my-6
+        @apply font-secularone text-black text-lg my-6 laptop:text-2xl
     }
     p, input, label, a{
-        @apply font-quicksand text-black text-lg font-medium mb-4
+        @apply font-quicksand text-black text-base font-medium mb-4 laptop:text-lg
     }
     @media screen and (min-width: 1024px) {
         label{
@@ -45,6 +45,26 @@
     }
     .button_secondary svg{
         @apply ml-4 stroke-marine
+    }
+    .button_radio{
+        @apply border-2 text-marine m-0 border-marine rounded-full;
+        appearance: none;
+        background-color: transparent;
+        font: inherit;
+        width: 1.15em;
+        height: 1.15em;
+    }
+    .button_radio::before {
+        content: "";
+        width: 0.65em;
+        height: 0.65em;
+        border-radius: 50%;
+        transform: scale(0);
+        transition: 120ms transform ease-in-out;
+        box-shadow: inset 1em 1em black;
+    }
+    .button_radio:checked::before {
+        transform: scale(1);
     }
     
 /*----- Grille présentation de la marque */ 
@@ -154,6 +174,41 @@
     #lampes > div.swiper.flex.flex-col.justify-center.items-center.laptop\:hidden.swiper-initialized.swiper-horizontal.swiper-ios.swiper-backface-hidden > div.swiper-pagination.w-1\/2.static.m-3.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal > span.swiper-pagination-bullet,
     #lampes > div.swiper.flex.flex-col.justify-center.items-center.laptop\:hidden.swiper-initialized.swiper-horizontal.swiper-ios.swiper-backface-hidden > div.swiper-pagination.w-1\/2.static.m-3.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal > span.swiper-pagination-bullet.swiper-pagination-bullet-active{
         @apply bg-marine;
+    }
+
+    body > main > div > div.swiper.h-\[60vh\].relative.laptop\:w-11\/12.swiper-coverflow.swiper-3d.swiper-initialized.swiper-horizontal.swiper-ios.swiper-watch-progress > div.swiper-button-prev,
+    body > main > div > div.swiper.h-\[60vh\].relative.laptop\:w-11\/12.swiper-coverflow.swiper-3d.swiper-initialized.swiper-horizontal.swiper-ios.swiper-watch-progress > div.swiper-button-next{
+        @apply text-marine;
+    }
+
+    #swiper-wrapper-d15ade25d2dec71f > div.swiper-slide.text-center.h-full.w-screen.flex.flex-col.justify-between.laptop\:h-\[60vh\].laptop\:w-1\/3.swiper-slide-visible.swiper-slide-prev,
+    #swiper-wrapper-d15ade25d2dec71f > div.swiper-slide.text-center.h-full.w-screen.flex.flex-col.justify-between.laptop\:h-\[60vh\].laptop\:w-1\/3.swiper-slide-visible.swiper-slide-next{
+        @apply opacity-80;
+    }
+
+/*---- Cartes inspiration */
+    .inspi_card{
+        @apply grid grid-cols-1 gap-4 m-4 laptop:grid-cols-5 laptop:mx-20;
+    }
+    .inspi_card__colors{
+        @apply absolute left-0 top-0 translate-y-1/2 bg-white w-10 h-1/2 py-2 opacity-50 rounded-lg flex flex-col items-center justify-evenly;
+        border-radius: 0 16px 16px 0;
+    }
+
+/*----Grid panier */
+    .panier_items_card{
+        @apply grid;
+        grid-template-columns: 1fr 2fr;
+    }
+
+    @media screen and (min-width: 1024px) {
+        .panier{
+            @apply grid;
+            grid-template-columns: 2fr 1fr;
+        }
+        .panier_items_card{
+            grid-template-columns: 1fr 2fr;
+        }
     }
 }
 
