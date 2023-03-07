@@ -13,10 +13,11 @@
                         <p>{{product.name}}</p>
                         
                         <div class="flex flex-row w-full">
-                            <div @click="activeProduct(variation)" v-for="(variation, index) in variations" :key="index">
+                            <div @click="activeProduct(variation)" v-for="(variation, index) in variations" :key="index" class="product_card cursor-pointer">
                                 <div v-if="variation.parent_id === product.id" class="h-full text-center">
                                     <img v-for="(image, index) in variation.images" :key="index" :src="image.src" :alt="image.alt" class="laptop:h-[40vh] laptop:mx-auto">
                                     <p>{{variation.price}}€</p>
+                                    <div :class="[this.variations.id === variation.id ? 'visible' : '']" class="product_card--underline w-full h-1 bg-light-red"></div>
                                 </div>
                             </div>
                         </div>
@@ -95,9 +96,17 @@ div.swiper-wrapper > div > div > div > p,
 div.swiper-wrapper > div.swiper-slide > div.self-center > div{
     visibility: hidden!important;
 }
-
 div.swiper-wrapper > div.swiper-slide.text-center.h-full.w-screen.flex.flex-col.justify-between.laptop\:h-\[60vh\].laptop\:w-1\/3.swiper-slide-active > div.flex.flex-row.w-full > div > p, 
 #app > div > div:nth-child(2) > div > div:nth-child(2) > div:nth-child(2) > div > div > div.swiper-wrapper > div.swiper-slide.text-center.h-full.w-screen.flex.flex-col.justify-between.laptop\:h-\[60vh\].laptop\:w-1\/3.swiper-slide-active > div.self-center > div{
+    visibility: visible!important;
+}
+.product_card--underline{
+    visibility: hidden!important;
+}
+.swiper-slide-active .product_card:hover .product_card--underline{
+    visibility: visible!important;
+}
+.swiper-slide-active .product_card .visible{
     visibility: visible!important;
 }
 </style>

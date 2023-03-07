@@ -261,6 +261,7 @@ export default{
                     return{
                         product_id: product.id,
                         quantity: product.quantity,
+                        //meta_data: product.description,
                     }
                 })
 

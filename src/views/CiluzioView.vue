@@ -16,7 +16,7 @@
                 </svg>
             </div>
             <div>
-                <div class="navigation mb-32 laptop:my-10">
+                <div class="navigation laptop:mb-32 laptop:my-10">
                     <div class="flex flex-wrap w-full justify-between place-items-end laptop:w-1/3 laptop:mx-auto">
                         <p @click="view = 'totems'" :class="{ active: view==='totems'}" class="relative cursor-pointer">
                             <span class="underline block h-1 absolute -inset-x-2 -bottom-2 top-8 bg-marine" aria-hidden="true"></span>
@@ -26,7 +26,7 @@
                             <span class="underline block h-1 absolute -inset-x-2 -bottom-2 top-8 bg-light-red" aria-hidden="true"></span>
                             <span class="text relative">Personnaliser</span>
                         </p>
-                        <p @click="view = 'random'" :class="{ active: view==='random' }" class="relative cursor-pointer">
+                        <p @click="view = 'random'" :class="{ active: view==='random' }" class="hidden relative cursor-pointer">
                             <span class="underline block h-1 absolute -inset-x-2 -bottom-2 top-8 bg-blue" aria-hidden="true"></span>
                             <span class="text relative">Générateur</span>
                         </p>
@@ -51,7 +51,7 @@ export default {
     components:{ Nav, Custom, Totems, Random, },
     data(){
         return{
-            view: 'totems',
+            view: 'custom',
         }
     }
 }

@@ -1,6 +1,6 @@
 <template>
     <div class="panier_items_card border-b-2 h-fit border-black">
-        <img class="w-full h-1/2 object-cover object-bottom" src="../assets/images/victor-medio.webp" alt=""/>
+        <img class="w-full h-1/2 object-cover object-bottom" :src="images[0].src" alt=""/>
             <div class="h-min">
                 <div class="flex flex-row justify-between items-baseline">
                     <p class="h3">{{name}}</p>
@@ -8,7 +8,7 @@
                 </div>
                 <div>
                     <p class="text-sm mb-0">Prix unitaire : {{price}} €</p>
-                    <p class="text-sm mb-0">Hauteur : {{dimensions.height}}</p>
+                    <p class="text-sm mb-0">Hauteur : {{dimensions.height}} cm</p>
                     <p v-if="dimensions.height === '53'" class="text-sm mb-0">Étagère(s) : 1</p>
                     <p v-else class="text-sm mb-0">Étagère(s) : 2</p>
                     <div class="product_description" v-html="description"></div>
