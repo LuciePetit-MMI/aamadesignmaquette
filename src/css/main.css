@@ -46,6 +46,26 @@
     .button_secondary svg{
         @apply ml-4 stroke-marine
     }
+    .button_radio{
+        @apply border-2 text-marine m-0 border-marine rounded-full;
+        appearance: none;
+        background-color: transparent;
+        font: inherit;
+        width: 1.15em;
+        height: 1.15em;
+    }
+    .button_radio::before {
+        content: "";
+        width: 0.65em;
+        height: 0.65em;
+        border-radius: 50%;
+        transform: scale(0);
+        transition: 120ms transform ease-in-out;
+        box-shadow: inset 1em 1em black;
+    }
+    .button_radio:checked::before {
+        transform: scale(1);
+    }
     
 /*----- Grille présentation de la marque */ 
     .grid_brand{
