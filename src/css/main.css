@@ -14,16 +14,16 @@
         @apply font-saotorpes text-marine text-3xl my-6 laptop:text-7xl
     }
     .h2{
-        @apply font-secularone text-black text-4xl my-6
+        @apply font-secularone text-black text-2xl my-6 laptop:text-4xl
     }
     .h3{
-        @apply font-secularone text-black text-3xl my-6
+        @apply font-secularone text-black text-xl my-6 laptop:text-3xl
     }
     .h4{
-        @apply font-secularone text-black text-2xl my-6
+        @apply font-secularone text-black text-lg my-6 laptop:text-2xl
     }
     p, input, label, a{
-        @apply font-quicksand text-black text-lg font-medium mb-4
+        @apply font-quicksand text-black text-base font-medium mb-4 laptop:text-lg
     }
     @media screen and (min-width: 1024px) {
         label{
@@ -163,6 +163,22 @@
     .inspi_card__colors{
         @apply absolute left-0 top-0 translate-y-1/2 bg-white w-10 h-1/2 py-2 opacity-50 rounded-lg flex flex-col items-center justify-evenly;
         border-radius: 0 16px 16px 0;
+    }
+
+/*----Grid panier */
+    .panier_items_card{
+        @apply grid;
+        grid-template-columns: 1fr 2fr;
+    }
+
+    @media screen and (min-width: 1024px) {
+        .panier{
+            @apply grid;
+            grid-template-columns: 2fr 1fr;
+        }
+        .panier_items_card{
+            grid-template-columns: 1fr 2fr;
+        }
     }
 }
 
